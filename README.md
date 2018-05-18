@@ -1,0 +1,2 @@
+#4nc-DesktopMascot
+hoge

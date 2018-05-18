@@ -1,0 +1,10 @@
+C:\program_files\DesktopMascot\DesktopMascot\bin\Debug\DesktopMascot.exe.config
+C:\program_files\DesktopMascot\DesktopMascot\bin\Debug\DesktopMascot.exe
+C:\program_files\DesktopMascot\DesktopMascot\bin\Debug\DesktopMascot.pdb
+C:\program_files\DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.Controller.resources
+C:\program_files\DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.Properties.Resources.resources
+C:\program_files\DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.csproj.GenerateResource.cache
+C:\program_files\DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.csproj.CoreCompileInputs.cache
+C:\program_files\DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.exe
+C:\program_files\DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.pdb
+C:\program_files\DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.csprojAssemblyReference.cache

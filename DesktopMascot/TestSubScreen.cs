@@ -29,6 +29,8 @@ namespace DesktopMascot
             {
                 form.Close();
             }
+            // フォームを空にする
+            formList.Clear();
         }
     }
 }

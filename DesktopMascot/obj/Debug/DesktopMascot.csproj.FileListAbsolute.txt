@@ -8,3 +8,15 @@ C:\program_files\DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.csproj.Core
 C:\program_files\DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.exe
 C:\program_files\DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.pdb
 C:\program_files\DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.csprojAssemblyReference.cache
+C:\Users\Moto\Desktop\私\学校\4年 前期\情報通信プロジェクト\4nc-DesktopMascot\DesktopMascot\bin\Debug\DesktopMascot.exe.config
+C:\Users\Moto\Desktop\私\学校\4年 前期\情報通信プロジェクト\4nc-DesktopMascot\DesktopMascot\bin\Debug\DesktopMascot.exe
+C:\Users\Moto\Desktop\私\学校\4年 前期\情報通信プロジェクト\4nc-DesktopMascot\DesktopMascot\bin\Debug\DesktopMascot.pdb
+C:\Users\Moto\Desktop\私\学校\4年 前期\情報通信プロジェクト\4nc-DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.csprojAssemblyReference.cache
+C:\Users\Moto\Desktop\私\学校\4年 前期\情報通信プロジェクト\4nc-DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.Controller.resources
+C:\Users\Moto\Desktop\私\学校\4年 前期\情報通信プロジェクト\4nc-DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.Properties.Resources.resources
+C:\Users\Moto\Desktop\私\学校\4年 前期\情報通信プロジェクト\4nc-DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.TestMainScreenForm1.resources
+C:\Users\Moto\Desktop\私\学校\4年 前期\情報通信プロジェクト\4nc-DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.TestSubScreenFrom1.resources
+C:\Users\Moto\Desktop\私\学校\4年 前期\情報通信プロジェクト\4nc-DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.csproj.GenerateResource.cache
+C:\Users\Moto\Desktop\私\学校\4年 前期\情報通信プロジェクト\4nc-DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.csproj.CoreCompileInputs.cache
+C:\Users\Moto\Desktop\私\学校\4年 前期\情報通信プロジェクト\4nc-DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.exe
+C:\Users\Moto\Desktop\私\学校\4年 前期\情報通信プロジェクト\4nc-DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.pdb

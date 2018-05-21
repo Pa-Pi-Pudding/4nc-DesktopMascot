@@ -14,7 +14,16 @@ namespace DesktopMascot
         protected List<Reaction> reactionList;
 
         // メソッド
+
+        public CharacterSet(int id)
+        {
+            characterId = id;
+        }
+
+        public int getId() { return this.characterId; }
+        public String getName() { return this.characterName; }
+
         // ↓例
-        abstract public Reaction getReactionSet1();
+        //abstract public Reaction getReactionSet1();
     }
 }

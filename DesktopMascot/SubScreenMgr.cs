@@ -16,16 +16,16 @@ namespace DesktopMascot
         protected CharacterSet characterSet;
 
         // メソッド
-        public SubScreenMgr()
+        public SubScreenMgr(int id)
         {
-            screenId = -1;
+            screenId = id;
             screenName = null;
-            formList = null;
+            formList = new List<Form>();
             characterSet = null;
         }
-        public int getSubScreenMgrID() { return this.screenId; }
-        public String getSubScreenMgrName() { return this.screenName; }
-        public void setCharacter(CharacterSet characterSet) { this.characterSet = characterSet; }
+        public int getId() { return this.screenId; }
+        public String getName() { return this.screenName; }
+        public void setCharacterSet(CharacterSet characterSet) { this.characterSet = characterSet; }
         abstract public void start();
         abstract public void allEnd();
     }

@@ -8,11 +8,10 @@ namespace DesktopMascot
 {
     class TestMainScreen : MainScreenMgr
     {
-        public TestMainScreen(int id, Controller controller) : base(controller)
+        public TestMainScreen(int id, List<SubScreenMgr> subScreenMgrList, Controller controller) : base(id, subScreenMgrList, controller)
         {
-            this.screenId = id;
             this.screenName = "TestName1";
-            this.form = new TestMainScreenForm1();
+            this.form = new TestMainScreenForm1(subScreenMgrList);
             // このタイミングで呼び出し
             // コンストラクタ以外でこのinitializeを呼び出しても無駄になる
             initialize();

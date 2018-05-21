@@ -12,14 +12,26 @@ namespace DesktopMascot
 {
     public partial class TestMainScreenForm1 : Form
     {
-        public TestMainScreenForm1()
+        List<SubScreenMgr> subScreenMgrList;
+        public TestMainScreenForm1(List<SubScreenMgr> subScreenMgrList)
         {
+            this.subScreenMgrList = subScreenMgrList;
             InitializeComponent();
         }
 
         private void TestMainScreenForm1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            subScreenMgrList[0].start();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            subScreenMgrList[0].allEnd();
         }
     }
 }

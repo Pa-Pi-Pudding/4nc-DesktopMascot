@@ -14,19 +14,23 @@ namespace DesktopMascot
         protected String screenName;
         protected Form form;
         protected Controller controller;
+        protected CharacterSet characterSet;
+        protected List<SubScreenMgr> subScreenMgrList;
         private bool isInit;
 
         // メソッド
-        public MainScreenMgr(Controller controller)
+        public MainScreenMgr(int id, List<SubScreenMgr> subScreenMgrList, Controller controller)
         {
-            this.screenId = -1;
+            this.screenId = id;
             this.screenName = null;
             this.form = null;
+            this.subScreenMgrList = subScreenMgrList;
             this.controller = controller;
             this.isInit = false;
         }
-        public int getMainScreenMgrID() { return screenId; }
-        public String getMainScreenMgrName() { return screenName; }
+        public int getId() { return screenId; }
+        public String getName() { return screenName; }
+        public void setCharacterSet(CharacterSet characterSet) { this.characterSet = characterSet; }
 
         abstract public void start();
         abstract public void stop();
@@ -51,8 +55,8 @@ namespace DesktopMascot
 
             this.form.TopLevel = false;
             this.controller.Controls.Add(form);
-            this.form.Visible = false;
             this.form.Show();
+            this.form.Visible = false;
             this.form.BringToFront();
             this.isInit = true;
         }

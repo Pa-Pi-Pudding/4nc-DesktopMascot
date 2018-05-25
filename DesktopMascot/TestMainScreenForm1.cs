@@ -61,6 +61,7 @@ namespace DesktopMascot
         private void create_button_Click(object sender, EventArgs e)
         {
             Button bufButton = (Button)sender;
+            // ↓このやり方は最悪、もっと頭のいい方法はないですか
             int i = bufButton.Location.Y / 50 - 1;
             if (0 <= i && i < subScreenMgrList.Count())
             {
@@ -71,6 +72,7 @@ namespace DesktopMascot
         private void delete_button_Click(object sender, EventArgs e)
         {
             Button bufButton = (Button)sender;
+            // ↓このやり方は最悪、もっと頭のいい方法はないですか
             int i = bufButton.Location.Y / 50 - 1;
             if (0 <= i && i < subScreenMgrList.Count())
             {

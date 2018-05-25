@@ -52,6 +52,8 @@
     <Compile Include="Controller.Designer.cs">
       <DependentUpon>Controller.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListsMaker.cs" />
+    <Compile Include="TestListsMaker.cs" />
     <Compile Include="TestSubScreenForm2.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -9,6 +9,8 @@ namespace DesktopMascot
 {
     public class TestListsMaker : ListsMaker
     {
+        // テスト用ListsMaker
+
         public TestListsMaker(Controller controller) : base(controller)
         {
             // メンバ変数の初期化

@@ -26,12 +26,12 @@ namespace DesktopMascot
 
         private void button1_Click(object sender, EventArgs e)
         {
-            subScreenMgrList[0].start();
+            subScreenMgrList[1].start();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            subScreenMgrList[0].allEnd();
+            subScreenMgrList[1].allEnd();
         }
     }
 }

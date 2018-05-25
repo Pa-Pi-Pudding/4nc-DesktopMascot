@@ -52,6 +52,12 @@
     <Compile Include="Controller.Designer.cs">
       <DependentUpon>Controller.cs</DependentUpon>
     </Compile>
+    <Compile Include="TestSubScreenForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestSubScreenForm2.Designer.cs">
+      <DependentUpon>TestSubScreenForm2.cs</DependentUpon>
+    </Compile>
     <Compile Include="IDAndName.cs" />
     <Compile Include="MainScreenMgr.cs" />
     <Compile Include="Program.cs" />
@@ -67,11 +73,12 @@
       <DependentUpon>TestMainScreenForm1.cs</DependentUpon>
     </Compile>
     <Compile Include="TestSubScreen.cs" />
-    <Compile Include="TestSubScreenFrom1.cs">
+    <Compile Include="TestSubScreen2.cs" />
+    <Compile Include="TestSubScreenForm1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TestSubScreenFrom1.Designer.cs">
-      <DependentUpon>TestSubScreenFrom1.cs</DependentUpon>
+    <Compile Include="TestSubScreenForm1.Designer.cs">
+      <DependentUpon>TestSubScreenForm1.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Controller.resx">
       <DependentUpon>Controller.cs</DependentUpon>
@@ -88,8 +95,11 @@
     <EmbeddedResource Include="TestMainScreenForm1.resx">
       <DependentUpon>TestMainScreenForm1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TestSubScreenFrom1.resx">
-      <DependentUpon>TestSubScreenFrom1.cs</DependentUpon>
+    <EmbeddedResource Include="TestSubScreenForm1.resx">
+      <DependentUpon>TestSubScreenForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestSubScreenForm2.resx">
+      <DependentUpon>TestSubScreenForm2.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

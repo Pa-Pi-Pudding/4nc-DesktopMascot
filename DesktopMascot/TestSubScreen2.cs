@@ -7,17 +7,17 @@ using System.Windows.Forms;
 
 namespace DesktopMascot
 {
-    class TestSubScreen : SubScreenMgr
+    class TestSubScreen2 : SubScreenMgr
     {
-        public TestSubScreen(int id) : base(id)
+        public TestSubScreen2(int id) : base(id)
         {
             // コンストラクタでスクリーンの名前を設定する
-            screenName = "TestSubScreen1";
+            screenName = "TestSubScreen2";
         }
 
         public override void start()
         {
-            Form bufForm = new TestSubScreenForm1();
+            Form bufForm = new TestSubScreenForm2();
             // 起動させるフォームを保持しておく
             formList.Add(bufForm);
             // フォームを表示する
@@ -26,7 +26,7 @@ namespace DesktopMascot
         public override void allEnd()
         {
             // 保持されたフォームをすべて閉じる
-            foreach(Form form in formList)
+            foreach (Form form in formList)
             {
                 form.Close();
             }

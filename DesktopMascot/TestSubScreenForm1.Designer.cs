@@ -1,6 +1,6 @@
 ﻿namespace DesktopMascot
 {
-    partial class TestSubScreenFrom1
+    partial class TestSubScreenForm1
     {
         /// <summary>
         /// Required designer variable.
@@ -50,6 +50,7 @@
             this.Controls.Add(this.label1);
             this.Name = "TestSubScreenFrom1";
             this.Text = "TestSubScreenFrom1";
+            this.Load += new System.EventHandler(this.TestSubScreenFrom1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

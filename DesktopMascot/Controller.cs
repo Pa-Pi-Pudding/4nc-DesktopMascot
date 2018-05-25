@@ -54,6 +54,8 @@ namespace DesktopMascot
             // コンストラクタのID番号は取りあえず0で設定している
             bufSubScrMgr = new TestSubScreen(0);
             subScreenMgrList.Add(bufSubScrMgr);
+            bufSubScrMgr = new TestSubScreen2(1);
+            subScreenMgrList.Add(bufSubScrMgr);
 
 
             // 全てのMainScreenMgrを生成し、Listに入れる

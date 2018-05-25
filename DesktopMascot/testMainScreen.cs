@@ -10,8 +10,12 @@ namespace DesktopMascot
     {
         public TestMainScreen(int id, List<SubScreenMgr> subScreenMgrList, Controller controller) : base(id, subScreenMgrList, controller)
         {
+            // コンストラクタでスクリーンの名前を設定する
             this.screenName = "TestName1";
+
+            // 作ったフォームを生成する
             this.form = new TestMainScreenForm1(subScreenMgrList);
+
             // このタイミングで呼び出し
             // コンストラクタ以外でこのinitializeを呼び出しても無駄になる
             initialize();

@@ -69,5 +69,15 @@ namespace DesktopMascot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap TestCharacter1_default {
+            get {
+                object obj = ResourceManager.GetObject("TestCharacter1_default", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

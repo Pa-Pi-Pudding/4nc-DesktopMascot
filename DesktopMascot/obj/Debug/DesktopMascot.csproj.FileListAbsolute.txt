@@ -22,3 +22,4 @@ C:\Users\Moto\Desktop\私\学校\4年 前期\情報通信プロジェクト\4nc-
 C:\Users\Moto\Desktop\私\学校\4年 前期\情報通信プロジェクト\4nc-DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.TestSubScreenForm1.resources
 C:\Users\Moto\Desktop\私\学校\4年 前期\情報通信プロジェクト\4nc-DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.TestSubScreenForm2.resources
 C:\Users\Moto\Desktop\私\学校\4年 前期\情報通信プロジェクト\4nc-DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.ConsoleScreenForm.resources
+C:\Users\Moto\Desktop\私\学校\4年 前期\情報通信プロジェクト\4nc-DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.TestCharacter1Form.resources

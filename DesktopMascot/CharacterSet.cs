@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DesktopMascot
 {
@@ -11,12 +12,14 @@ namespace DesktopMascot
         // メンバ変数
         protected int characterId;
         protected String characterName;
+        protected Form form;
 
         // メソッド
 
         public CharacterSet(int id)
         {
             characterId = id;
+            form = null;
         }
 
         public int getId() { return this.characterId; }

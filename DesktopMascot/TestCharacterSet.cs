@@ -11,6 +11,7 @@ namespace DesktopMascot
         public TestCharacterSet(int id) : base(id)
         {
             characterName = "TestCharacter1";
+            //this.form = new 
         }
 
         public override Reaction getTestReaction()

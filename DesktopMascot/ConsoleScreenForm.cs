@@ -35,6 +35,12 @@ namespace DesktopMascot
             Reaction bufReact = this.characterSet.getEchoReaction(bufText);
             String serif = bufReact.message + newLineCode;
             label1.Text += this.characterSet.getName() + ">" + serif + newLineCode;
+
+            // テキストボックスのクリア
+            textBox1.ResetText();
+
+            // panelの自動スクロール
+            panel1.AutoScrollPosition = new Point(panel1.AutoScrollPosition.X, panel1.Height + panel1.VerticalScroll.Value);
         }
 
         public void setCharacterSet(CharacterSet characterSet)
@@ -45,6 +51,15 @@ namespace DesktopMascot
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Enterキーがおされたら
+            if((e.KeyCode == Keys.Enter))
+            {
+                button1_Click(sender, e);
+            }
         }
     }
 }

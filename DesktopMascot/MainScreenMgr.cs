@@ -30,7 +30,7 @@ namespace DesktopMascot
         }
         public int getId() { return screenId; }
         public String getName() { return screenName; }
-        public void setCharacterSet(CharacterSet characterSet) { this.characterSet = characterSet; }
+        virtual public void setCharacterSet(CharacterSet characterSet) { this.characterSet = characterSet; }
 
         abstract public void start();
         abstract public void stop();

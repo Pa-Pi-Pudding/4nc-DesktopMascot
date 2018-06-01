@@ -11,7 +11,6 @@ namespace DesktopMascot
         // メンバ変数
         protected int characterId;
         protected String characterName;
-        protected List<Reaction> reactionList;
 
         // メソッド
 
@@ -24,6 +23,7 @@ namespace DesktopMascot
         public String getName() { return this.characterName; }
 
         // ↓例
-        //abstract public Reaction getReactionSet1();
+        abstract public Reaction getTestReaction();
+        abstract public Reaction getEchoReaction(String inputMessage);
     }
 }

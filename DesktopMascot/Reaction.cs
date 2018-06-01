@@ -8,9 +8,10 @@ namespace DesktopMascot
 {
     public struct Reaction
     {
-        // 音
-        // Sound sound;
+        // 今後ほかにも必要な反応があるかもしれないのでこのクラスを作った
+        // 今のところ必要なのは「何を喋るか」というだけなので、stringだけになっている。
+
         // メッセージ
-        // String message;
+        public String message;
     }
 }

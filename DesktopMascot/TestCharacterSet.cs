@@ -12,5 +12,21 @@ namespace DesktopMascot
         {
             characterName = "TestCharacter1";
         }
+
+        public override Reaction getTestReaction()
+        {
+            Reaction bufReact = new Reaction();
+            bufReact.message = "これはテストメッセージ1です";
+
+            return bufReact;
+        }
+
+        public override Reaction getEchoReaction(String inputMessage)
+        {
+            Reaction bufReact = new Reaction();
+            bufReact.message = "あなたが入力したメッセージは、" + inputMessage + "ですね！";
+
+            return bufReact;
+        }
     }
 }

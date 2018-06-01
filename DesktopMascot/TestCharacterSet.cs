@@ -14,6 +14,16 @@ namespace DesktopMascot
             //this.form = new 
         }
 
+        public override void start()
+        {
+            return;
+        }
+
+        public override void stop()
+        {
+            return;
+        }
+
         public override Reaction getTestReaction()
         {
             Reaction bufReact = new Reaction();

@@ -25,8 +25,13 @@ namespace DesktopMascot
         public int getId() { return this.characterId; }
         public String getName() { return this.characterName; }
 
+        abstract public void start();
+        abstract public void stop();
+
         // ↓例
         abstract public Reaction getTestReaction();
         abstract public Reaction getEchoReaction(String inputMessage);
+
+
     }
 }

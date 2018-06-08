@@ -34,7 +34,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(496, 368);
+            this.ClientSize = new System.Drawing.Size(516, 460);
             this.Name = "Controller";
             this.Text = "Controller";
             this.Load += new System.EventHandler(this.Controller_Load);

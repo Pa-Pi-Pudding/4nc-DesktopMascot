@@ -11,16 +11,26 @@ namespace DesktopMascot
         public TestCharacterSet(int id, Controller controller) : base(id, controller)
         {
             characterName = "TestCharacter1";
-            this.form = new TestCharacter1Form();
         }
 
         public override void start()
         {
+            // ここでフォームを生成する
+            this.form = new TestCharacter1Form();
+
+            this.form.TopLevel = false;
+            this.controller.Controls.Add(form);
+            this.form.Show();
+            this.form.Visible = true;
+            this.form.Location = new System.Drawing.Point(290, 90);
+            this.form.BringToFront();
+
             return;
         }
 
         public override void stop()
         {
+            this.form.Close();
             return;
         }
 

@@ -45,12 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CharacterSet.cs" />
-    <Compile Include="ConsoleScreen.cs" />
-    <Compile Include="ConsoleScreenForm.cs">
+    <Compile Include="CharacterSets\CharacterSet.cs" />
+    <Compile Include="MainScreens\ConsoleScreen.cs" />
+    <Compile Include="MainScreens\ConsoleScreenForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConsoleScreenForm.Designer.cs">
+    <Compile Include="MainScreens\ConsoleScreenForm.Designer.cs">
       <DependentUpon>ConsoleScreenForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Controller.cs">
@@ -59,43 +59,43 @@
     <Compile Include="Controller.Designer.cs">
       <DependentUpon>Controller.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListsMaker.cs" />
-    <Compile Include="TestCharacter1Form.cs">
+    <Compile Include="ListsMakers\ListsMaker.cs" />
+    <Compile Include="CharacterSets\TestCharacter1Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TestCharacter1Form.Designer.cs">
+    <Compile Include="CharacterSets\TestCharacter1Form.Designer.cs">
       <DependentUpon>TestCharacter1Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="TestListsMaker.cs" />
-    <Compile Include="TestSubScreenForm2.cs">
+    <Compile Include="ListsMakers\TestListsMaker.cs" />
+    <Compile Include="SubScreens\TestSubScreenForm2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TestSubScreenForm2.Designer.cs">
+    <Compile Include="SubScreens\TestSubScreenForm2.Designer.cs">
       <DependentUpon>TestSubScreenForm2.cs</DependentUpon>
     </Compile>
     <Compile Include="IDAndName.cs" />
-    <Compile Include="MainScreenMgr.cs" />
+    <Compile Include="MainScreens\MainScreenMgr.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reaction.cs" />
-    <Compile Include="SubScreenMgr.cs" />
-    <Compile Include="TestCharacterSet.cs" />
-    <Compile Include="TestMainScreen.cs" />
-    <Compile Include="TestMainScreenForm1.cs">
+    <Compile Include="CharacterSets\Reaction.cs" />
+    <Compile Include="SubScreens\SubScreenMgr.cs" />
+    <Compile Include="CharacterSets\TestCharacterSet.cs" />
+    <Compile Include="MainScreens\TestMainScreen.cs" />
+    <Compile Include="MainScreens\TestMainScreenForm1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TestMainScreenForm1.Designer.cs">
+    <Compile Include="MainScreens\TestMainScreenForm1.Designer.cs">
       <DependentUpon>TestMainScreenForm1.cs</DependentUpon>
     </Compile>
-    <Compile Include="TestSubScreen.cs" />
-    <Compile Include="TestSubScreen2.cs" />
-    <Compile Include="TestSubScreenForm1.cs">
+    <Compile Include="SubScreens\TestSubScreen.cs" />
+    <Compile Include="SubScreens\TestSubScreen2.cs" />
+    <Compile Include="SubScreens\TestSubScreenForm1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TestSubScreenForm1.Designer.cs">
+    <Compile Include="SubScreens\TestSubScreenForm1.Designer.cs">
       <DependentUpon>TestSubScreenForm1.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ConsoleScreenForm.resx">
+    <EmbeddedResource Include="MainScreens\ConsoleScreenForm.resx">
       <DependentUpon>ConsoleScreenForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controller.resx">
@@ -111,16 +111,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TestCharacter1Form.resx">
+    <EmbeddedResource Include="CharacterSets\TestCharacter1Form.resx">
       <DependentUpon>TestCharacter1Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TestMainScreenForm1.resx">
+    <EmbeddedResource Include="MainScreens\TestMainScreenForm1.resx">
       <DependentUpon>TestMainScreenForm1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TestSubScreenForm1.resx">
+    <EmbeddedResource Include="SubScreens\TestSubScreenForm1.resx">
       <DependentUpon>TestSubScreenForm1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TestSubScreenForm2.resx">
+    <EmbeddedResource Include="SubScreens\TestSubScreenForm2.resx">
       <DependentUpon>TestSubScreenForm2.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">

@@ -12,6 +12,7 @@ namespace DesktopMascot
         // メンバ変数
         protected int screenId;
         protected String screenName;
+        protected String screenDescription;
         protected List<Form> formList;
         protected CharacterSet characterSet;
 
@@ -20,6 +21,7 @@ namespace DesktopMascot
         {
             screenId = id;
             screenName = null;
+            screenDescription = null;
             formList = new List<Form>();
             characterSet = null;
         }

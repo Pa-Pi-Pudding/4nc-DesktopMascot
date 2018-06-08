@@ -13,6 +13,8 @@ namespace DesktopMascot
         {
             // コンストラクタでスクリーンの名前を設定する
             screenName = "TestSubScreen1";
+            // コンストラクタでスクリーンの機能について軽い説明を入れる。
+            screenDescription = "これはテスト用の画面です。";
         }
 
         public override void start()

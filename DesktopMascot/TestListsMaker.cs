@@ -27,9 +27,11 @@ namespace DesktopMascot
             IDAndName bufIDAndName;
 
             // 全てのCharacterSetを生成し、Listに入れる
-            bufCharaSet = new TestCharacterSet(0);
-            characterSetList.Add(bufCharaSet);
             // IDと名前も同時に記録しておく
+            // 1個目 コンストラクタ
+            bufCharaSet = new TestCharacterSet(0, controller);
+            characterSetList.Add(bufCharaSet);
+            // 2個目 IDと名前
             bufIDAndName.id = bufCharaSet.getId();
             bufIDAndName.name = bufCharaSet.getName();
             characterSetIdAndNameList.Add(bufIDAndName);

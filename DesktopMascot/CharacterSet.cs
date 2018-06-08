@@ -13,13 +13,15 @@ namespace DesktopMascot
         protected int characterId;
         protected String characterName;
         protected Form form;
+        protected Controller controller;
 
         // メソッド
 
-        public CharacterSet(int id)
+        public CharacterSet(int id, Controller controller)
         {
             characterId = id;
             form = null;
+            this.controller = controller;
         }
 
         public int getId() { return this.characterId; }

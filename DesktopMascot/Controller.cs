@@ -46,9 +46,9 @@ namespace DesktopMascot
         private void Controller_Load(object sender, EventArgs e)
         {
             // 最初に表示するMainScreenをStartする
-            mainScreenMgrList[0].start();
+            mainScreenMgrList[1].start();
             // 最初に表示するキャラクターをスタートする
-            //characterSetList[0].start();
+            characterSetList[0].start();
         }
 
     }

@@ -36,6 +36,7 @@ namespace DesktopMascot
 
         public override Reaction getTestReaction()
         {
+            // ここの中の処理はマネしないように
             Reaction bufReact = new Reaction();
             bufReact.message = "これはテストメッセージ1です";
 
@@ -44,8 +45,12 @@ namespace DesktopMascot
 
         public override Reaction getEchoReaction(String inputMessage)
         {
+            // ここの中の処理はマネしないように
             Reaction bufReact = new Reaction();
             bufReact.message = "あなたが入力したメッセージは、" + inputMessage + "ですね！";
+            TestCharacter1Form buf = (TestCharacter1Form)this.form;
+            buf.setHelloAnimation();
+
 
             return bufReact;
         }

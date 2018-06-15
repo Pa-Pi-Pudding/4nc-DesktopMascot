@@ -73,6 +73,16 @@ namespace DesktopMascot.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap TestCharacter1_angry {
+            get {
+                object obj = ResourceManager.GetObject("TestCharacter1_angry", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap TestCharacter1_default {
             get {
                 object obj = ResourceManager.GetObject("TestCharacter1_default", resourceCulture);
@@ -86,6 +96,16 @@ namespace DesktopMascot.Properties {
         internal static System.Drawing.Bitmap TestCharacter1_hello {
             get {
                 object obj = ResourceManager.GetObject("TestCharacter1_hello", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap TestCharacter1_surprised {
+            get {
+                object obj = ResourceManager.GetObject("TestCharacter1_surprised", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

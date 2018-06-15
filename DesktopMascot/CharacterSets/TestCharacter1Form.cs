@@ -12,7 +12,7 @@ namespace DesktopMascot
 {
     public partial class TestCharacter1Form : Form
     {
-        enum AnimationMode { DEFAULT, HELLO, WHAT };
+        enum AnimationMode { DEFAULT, HELLO, WHAT, ANGRY, SURPRISED };
         private AnimationMode mode;
         private int animeCounter;
 
@@ -26,6 +26,20 @@ namespace DesktopMascot
         public void setHelloAnimation()
         {
             mode = AnimationMode.HELLO;
+            animeCounter = 0;
+            return;
+        }
+
+        public void setAngryAnimation()
+        {
+            mode = AnimationMode.ANGRY;
+            animeCounter = 0;
+            return;
+        }
+
+        public void setSurprisedAnimation()
+        {
+            mode = AnimationMode.SURPRISED;
             animeCounter = 0;
             return;
         }
@@ -70,6 +84,12 @@ namespace DesktopMascot
                     break;
                 case AnimationMode.WHAT:
                     this.pictureBox1.Image = Properties.Resources.TestCharacter1_what;
+                    break;
+                case AnimationMode.ANGRY:
+                    this.pictureBox1.Image = Properties.Resources.TestCharacter1_angry;
+                    break;
+                case AnimationMode.SURPRISED:
+                    this.pictureBox1.Image = Properties.Resources.TestCharacter1_surprised;
                     break;
                 default:
                     break;

@@ -27,6 +27,7 @@ namespace DesktopMascot
         }
         public int getId() { return this.screenId; }
         public String getName() { return this.screenName; }
+        public String getDescription() { return this.screenDescription; }
         public void setCharacterSet(CharacterSet characterSet) { this.characterSet = characterSet; }
         abstract public void start();
         abstract public void allEnd();

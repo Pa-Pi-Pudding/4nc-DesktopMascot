@@ -13,5 +13,7 @@ namespace DesktopMascot
 
         // メッセージ
         public String message;
+        // 二個メッセージが必要なものは適宜使用する
+        public String subMessage;
     }
 }

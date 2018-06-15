@@ -23,3 +23,19 @@ C:\Users\Moto\Desktop\私\学校\4年 前期\情報通信プロジェクト\4nc-
 C:\Users\Moto\Desktop\私\学校\4年 前期\情報通信プロジェクト\4nc-DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.TestSubScreenForm2.resources
 C:\Users\Moto\Desktop\私\学校\4年 前期\情報通信プロジェクト\4nc-DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.ConsoleScreenForm.resources
 C:\Users\Moto\Desktop\私\学校\4年 前期\情報通信プロジェクト\4nc-DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.TestCharacter1Form.resources
+C:\Users\kyota\Documents\4nc-DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.csprojAssemblyReference.cache
+C:\Users\kyota\Documents\4nc-DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.ConsoleScreenForm.resources
+C:\Users\kyota\Documents\4nc-DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.Controller.resources
+C:\Users\kyota\Documents\4nc-DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.Properties.Resources.resources
+C:\Users\kyota\Documents\4nc-DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.TestCharacter1Form.resources
+C:\Users\kyota\Documents\4nc-DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.TestMainScreenForm1.resources
+C:\Users\kyota\Documents\4nc-DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.TestSubScreenForm1.resources
+C:\Users\kyota\Documents\4nc-DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.TestSubScreenForm2.resources
+C:\Users\kyota\Documents\4nc-DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.csproj.GenerateResource.cache
+C:\Users\kyota\Documents\4nc-DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.csproj.CoreCompileInputs.cache
+C:\Users\kyota\Documents\4nc-DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.exe
+C:\Users\kyota\Documents\4nc-DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.pdb
+C:\Users\kyota\Documents\4nc-DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.NewsViewerForm.resources
+C:\Users\kyota\Documents\4nc-DesktopMascot\DesktopMascot\bin\Debug\DesktopMascot.exe.config
+C:\Users\kyota\Documents\4nc-DesktopMascot\DesktopMascot\bin\Debug\DesktopMascot.exe
+C:\Users\kyota\Documents\4nc-DesktopMascot\DesktopMascot\bin\Debug\DesktopMascot.pdb

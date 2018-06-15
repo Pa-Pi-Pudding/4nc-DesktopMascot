@@ -1,25 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using System.Text;using System.IO;
+using System.Net;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace DesktopMascot
 {
-    class TestSubScreen : SubScreenMgr
+    class NewsViewer : SubScreenMgr
     {
-        public TestSubScreen(int id) : base(id)
+        public NewsViewer(int id) : base(id)
         {
             // コンストラクタでスクリーンの名前を設定する
-            screenName = "TestSubScreen1";
+            screenName = "Newsviewer";
             // コンストラクタでスクリーンの機能について軽い説明を入れる。
-            screenDescription = "これはテスト用の画面です。";
+            screenDescription = "hoge";
         }
 
         public override void start()
         {
-            Form bufForm = new TestSubScreenForm1();
+            Form bufForm = new NewsViewerForm();
             // 起動させるフォームを保持しておく
             formList.Add(bufForm);
             // フォームを表示する
@@ -35,5 +38,7 @@ namespace DesktopMascot
             // フォームを空にする
             formList.Clear();
         }
+
     }
+
 }

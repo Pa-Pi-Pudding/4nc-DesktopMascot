@@ -27,13 +27,24 @@ namespace DesktopMascot
         public int getId() { return this.characterId; }
         public String getName() { return this.characterName; }
 
+
         abstract public void start();
         abstract public void stop();
 
         // ↓例
-        abstract public Reaction getTestReaction();
-        abstract public Reaction getEchoReaction(String inputMessage);
+        virtual public Reaction getTestReaction() { return getNullReaction(); }
+        virtual public Reaction getEchoReaction(String inputMessage) { return getNullReaction(); }
+        virtual public Reaction getFuncStartReaction(String funcName) { return getNullReaction(); }
+        virtual public Reaction getCommunicationReaction(String message) { return getNullReaction(); }
+        virtual public Reaction getFuncAllDisplayReaction() { return getNullReaction(); }
 
+        // 何の反応もしない関数 内部でだけ使用
+        private Reaction getNullReaction()
+        {
+            Reaction buf = new Reaction();
+            buf.message = null;
+            return buf;
+        }
 
     }
 }

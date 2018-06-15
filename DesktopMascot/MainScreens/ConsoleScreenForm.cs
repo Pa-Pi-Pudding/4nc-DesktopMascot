@@ -14,6 +14,7 @@ namespace DesktopMascot
     {
         private String newLineCode = "\n\r";
         private String userName = "testName";
+        private String helpCommand = "help";
         private CharacterSet characterSet;
 
         List<SubScreenMgr> subScreenMgrList;
@@ -30,10 +31,51 @@ namespace DesktopMascot
 
         private void button1_Click(object sender, EventArgs e)
         {
+            bool isFinish = false;
+            String serif = "";
+            Reaction bufReact = new Reaction();
+            bufReact.message = "message is not found";
+
             String bufText = this.textBox1.Text;
             label1.Text += userName + ">" + bufText + newLineCode;
-            Reaction bufReact = this.characterSet.getEchoReaction(bufText);
-            String serif = bufReact.message + newLineCode;
+
+            // 機能一覧を表示
+            if (!isFinish)
+            {
+                if(bufText == helpCommand)
+                {
+                    bufReact = this.characterSet.getFuncAllDisplayReaction();
+                    serif += bufReact.subMessage + newLineCode + newLineCode;
+                    foreach(SubScreenMgr item in subScreenMgrList)
+                    {
+                        serif += item.getName() + "\t" + "..." + item.getDescription() + newLineCode;
+                    }
+                    serif += newLineCode;
+                    isFinish = true;
+                }
+            }
+
+            // 機能を検索
+            if (!isFinish)
+            {
+                foreach (SubScreenMgr item in subScreenMgrList)
+                {
+                    if (bufText == item.getName())
+                    {
+                        isFinish = true;
+                        item.start();
+                        bufReact = this.characterSet.getFuncStartReaction(item.getName());
+                    }
+                }
+            }
+
+            // 会話を検索
+            if (!isFinish)
+            {
+                bufReact = this.characterSet.getCommunicationReaction(bufText);
+            }
+
+            serif += bufReact.message + newLineCode;
             label1.Text += this.characterSet.getName() + ">" + serif + newLineCode;
 
             // テキストボックスのクリア

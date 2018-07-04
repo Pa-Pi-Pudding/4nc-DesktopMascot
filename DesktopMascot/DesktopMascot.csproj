@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -104,9 +105,11 @@
     </Compile>
     <EmbeddedResource Include="MainScreens\ConsoleScreenForm.resx">
       <DependentUpon>ConsoleScreenForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Controller.resx">
       <DependentUpon>Controller.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -120,12 +123,14 @@
     </Compile>
     <EmbeddedResource Include="CharacterSets\TestCharacter1Form.resx">
       <DependentUpon>TestCharacter1Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="MainScreens\TestMainScreenForm1.resx">
       <DependentUpon>TestMainScreenForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubScreens\NewsViewerForm.resx">
       <DependentUpon>NewsViewerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="SubScreens\TestSubScreenForm1.resx">
       <DependentUpon>TestSubScreenForm1.cs</DependentUpon>

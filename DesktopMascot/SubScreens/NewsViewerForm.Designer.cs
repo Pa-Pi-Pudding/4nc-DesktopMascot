@@ -29,21 +29,33 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(75, 72);
+            this.button1.Location = new System.Drawing.Point(51, 55);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
-            this.button1.Text = "gethtml";
+            this.button1.Text = "Anime";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.gethtml_click);
+            this.button1.Click += new System.EventHandler(this.Anime_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(161, 55);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Game";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Game_Click);
             // 
             // NewsViewerForm
             // 
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(566, 554);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "NewsViewerForm";
             this.Load += new System.EventHandler(this.NewsViewerForm_Load);
@@ -54,5 +66,6 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

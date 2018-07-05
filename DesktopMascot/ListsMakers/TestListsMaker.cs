@@ -45,6 +45,8 @@ namespace DesktopMascot
             subScreenMgrList.Add(bufSubScrMgr);
             bufSubScrMgr = new NewsViewer(2);
             subScreenMgrList.Add(bufSubScrMgr);
+            bufSubScrMgr = new WeatherScreen(3);
+            subScreenMgrList.Add(bufSubScrMgr);
 
 
             // 全てのMainScreenMgrを生成し、Listに入れる

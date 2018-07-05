@@ -56,3 +56,11 @@ C:\Users\kazum\Dropbox\SourceTree\4nc-DesktopMascot-ver2\DesktopMascot\obj\Debug
 C:\Users\kazum\Dropbox\SourceTree\4nc-DesktopMascot-ver2\DesktopMascot\bin\Debug\DesktopMascot.exe.config
 C:\Users\kazum\Dropbox\SourceTree\4nc-DesktopMascot-ver2\DesktopMascot\bin\Debug\DesktopMascot.exe
 C:\Users\kazum\Dropbox\SourceTree\4nc-DesktopMascot-ver2\DesktopMascot\bin\Debug\DesktopMascot.pdb
+C:\Users\kazum\Dropbox\SourceTree\4nc-DesktopMascot-ver2\DesktopMascot\bin\Debug\Newtonsoft.Json.dll
+C:\Users\kazum\Dropbox\SourceTree\4nc-DesktopMascot-ver2\DesktopMascot\bin\Debug\System.Net.Http.dll
+C:\Users\kazum\Dropbox\SourceTree\4nc-DesktopMascot-ver2\DesktopMascot\bin\Debug\System.Security.Cryptography.Algorithms.dll
+C:\Users\kazum\Dropbox\SourceTree\4nc-DesktopMascot-ver2\DesktopMascot\bin\Debug\System.Security.Cryptography.Encoding.dll
+C:\Users\kazum\Dropbox\SourceTree\4nc-DesktopMascot-ver2\DesktopMascot\bin\Debug\System.Security.Cryptography.Primitives.dll
+C:\Users\kazum\Dropbox\SourceTree\4nc-DesktopMascot-ver2\DesktopMascot\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+C:\Users\kazum\Dropbox\SourceTree\4nc-DesktopMascot-ver2\DesktopMascot\bin\Debug\Newtonsoft.Json.xml
+C:\Users\kazum\Dropbox\SourceTree\4nc-DesktopMascot-ver2\DesktopMascot\obj\Debug\DesktopMascot.csproj.CopyComplete

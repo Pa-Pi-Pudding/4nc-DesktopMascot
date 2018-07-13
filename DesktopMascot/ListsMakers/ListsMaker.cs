@@ -14,15 +14,17 @@ namespace DesktopMascot
         protected List<CharacterSet> characterSetList;
         protected List<IDAndName> mainScreenMgrIdAndNameList;
         protected List<IDAndName> characterSetIdAndNameList;
+        protected CharacterInitializer characterInitializer;
         protected Form controller;
 
-        public ListsMaker(Controller controller)
+        public ListsMaker(Controller controller, CharacterInitializer characterInitializer)
         {
             this.mainScreenMgrList = null;
             this.subScreenMgrList = null;
             this.characterSetList = null;
             this.mainScreenMgrIdAndNameList = null;
             this.characterSetIdAndNameList = null;
+            this.characterInitializer = characterInitializer;
             this.controller = controller;
         }
 

@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CharacterSets\CharacterInitializer.cs" />
     <Compile Include="CharacterSets\CharacterSet.cs" />
     <Compile Include="MainScreens\ConsoleScreen.cs" />
     <Compile Include="MainScreens\ConsoleScreenForm.cs">

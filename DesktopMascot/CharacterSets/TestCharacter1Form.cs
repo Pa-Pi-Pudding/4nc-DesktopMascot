@@ -16,11 +16,14 @@ namespace DesktopMascot
         private AnimationMode mode;
         private int animeCounter;
 
-        public TestCharacter1Form()
+        public TestCharacter1Form(CharacterInitializer characterInitializer)
         {
             mode = AnimationMode.DEFAULT;
             animeCounter = 0;
             InitializeComponent();
+
+            // 最後に呼び出すこと（正確にはInitializeComponentの後に呼び出す）
+            characterInitializer.initCharaPictureBox(pictureBox1);
         }
 
         public void setHelloAnimation()

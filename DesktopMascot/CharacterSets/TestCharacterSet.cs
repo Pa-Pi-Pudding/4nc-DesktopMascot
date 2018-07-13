@@ -12,7 +12,7 @@ namespace DesktopMascot
         int counter;
         Random rnd;
 
-        public TestCharacterSet(int id, Controller controller) : base(id, controller)
+        public TestCharacterSet(int id, Controller controller, CharacterInitializer characterInitializer) : base(id, controller, characterInitializer)
         {
             counter = 0;
             characterName = "TestCharacter1";
@@ -22,7 +22,7 @@ namespace DesktopMascot
         public override void start()
         {
             // ここでフォームを生成する
-            this.form = this.bufForm = new TestCharacter1Form();
+            this.form = this.bufForm = new TestCharacter1Form(characterInitializer);
 
             this.form.TopLevel = false;
             this.controller.Controls.Add(form);

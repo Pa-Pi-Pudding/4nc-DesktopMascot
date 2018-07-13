@@ -56,6 +56,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(204, 327);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TestCharacter1Form";
             this.Text = "TestCharacter1Form";
             this.Load += new System.EventHandler(this.TestCharacter1Form_Load);

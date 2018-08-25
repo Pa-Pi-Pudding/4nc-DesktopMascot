@@ -39,3 +39,9 @@ C:\Users\kyota\Documents\4nc-DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot
 C:\Users\kyota\Documents\4nc-DesktopMascot\DesktopMascot\bin\Debug\DesktopMascot.exe.config
 C:\Users\kyota\Documents\4nc-DesktopMascot\DesktopMascot\bin\Debug\DesktopMascot.exe
 C:\Users\kyota\Documents\4nc-DesktopMascot\DesktopMascot\bin\Debug\DesktopMascot.pdb
+C:\Users\kyota\Documents\4nc-DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.SubScreens.Newsviewer.NewsShow.resources
+C:\Users\kyota\Documents\4nc-DesktopMascot\DesktopMascot\obj\Debug\SubScreens\Newsviewer\UserControl1.g.cs
+C:\Users\kyota\Documents\4nc-DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot_MarkupCompile.cache
+C:\Users\kyota\Documents\4nc-DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot_MarkupCompile.lref
+C:\Users\kyota\Documents\4nc-DesktopMascot\DesktopMascot\obj\Debug\SubScreens\Newsviewer\UserControl1.baml
+C:\Users\kyota\Documents\4nc-DesktopMascot\DesktopMascot\obj\Debug\DesktopMascot.g.resources

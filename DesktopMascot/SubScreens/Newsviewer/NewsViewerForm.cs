@@ -18,7 +18,6 @@ namespace DesktopMascot
 {
     public partial class NewsViewerForm: Form
     {
-        SubScreens.Newsviewer.NewsShow newsShow = new SubScreens.Newsviewer.NewsShow();
         private static NewsViewerForm _NewsviewerformInstance;
        
         private string sendData="";
@@ -127,14 +126,13 @@ namespace DesktopMascot
                 //formGraphics.Dispose();
             }
         }
-
+        public string ReceiveData { get; set; }
         private void Anime_Click(object sender, EventArgs e)
         {
             string sendUrl = "http://www.saiani.net/feed";
-            newsShow.ReceiveData = sendUrl;
-            newsShow.Show();
-            // string html = GetHtml("https://animeanime.jp/category/news/");
-
+            ReceiveData = sendUrl;
+            Newsview viewer = new Newsview();
+            viewer.Show();
 
         }
 

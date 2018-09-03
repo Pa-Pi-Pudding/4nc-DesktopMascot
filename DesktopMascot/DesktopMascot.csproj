@@ -74,11 +74,14 @@
       <DependentUpon>TestCharacter1Form.cs</DependentUpon>
     </Compile>
     <Compile Include="ListsMakers\TestListsMaker.cs" />
-    <Compile Include="SubScreens\Newsviewer\NewsShow.cs">
+    <Compile Include="SubScreens\Newsviewer\NewsControl.xaml.cs">
+      <DependentUpon>NewsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubScreens\Newsviewer\Newsview.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SubScreens\Newsviewer\NewsShow.Designer.cs">
-      <DependentUpon>NewsShow.cs</DependentUpon>
+    <Compile Include="SubScreens\Newsviewer\Newsview.Designer.cs">
+      <DependentUpon>Newsview.cs</DependentUpon>
     </Compile>
     <Compile Include="SubScreens\Newsviewer\NewsViewerForm.cs">
       <SubType>Form</SubType>
@@ -87,9 +90,6 @@
       <DependentUpon>NewsViewerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SubScreens\Newsviewer\NewsViewer.cs" />
-    <Compile Include="SubScreens\Newsviewer\UserControl1.xaml.cs">
-      <DependentUpon>UserControl1.xaml</DependentUpon>
-    </Compile>
     <Compile Include="SubScreens\TestSubScreenForm2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,8 +143,8 @@
     <EmbeddedResource Include="MainScreens\TestMainScreenForm1.resx">
       <DependentUpon>TestMainScreenForm1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SubScreens\Newsviewer\NewsShow.resx">
-      <DependentUpon>NewsShow.cs</DependentUpon>
+    <EmbeddedResource Include="SubScreens\Newsviewer\Newsview.resx">
+      <DependentUpon>Newsview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubScreens\Newsviewer\NewsViewerForm.resx">
       <DependentUpon>NewsViewerForm.cs</DependentUpon>
@@ -188,7 +188,7 @@
     <None Include="Resources\TestCharacter1_surprised.png" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="SubScreens\Newsviewer\UserControl1.xaml">
+    <Page Include="SubScreens\Newsviewer\NewsControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

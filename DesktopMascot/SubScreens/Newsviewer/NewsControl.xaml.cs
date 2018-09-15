@@ -20,22 +20,26 @@ namespace DesktopMascot.SubScreens.Newsviewer
     /// </summary>
     public partial class NewsControl : UserControl
     {
-        NewsViewerForm newsform= new NewsViewerForm();
+
+        NewsViewerForm newsform;
+        TableClass tableObject;
         public NewsControl()
         {
+            newsform = new NewsViewerForm();
             InitializeComponent();
-            string hoge = newsform.ReceiveData; 
-            TableClass tableObject = new TableClass();
-            tableObject.colomn1 = "hoge";
-            tableObject.colomn2 = "hoge";
-            tableObject.colomn3 = "hoge";
+            tableObject = new TableClass();
 
-            DataContext = tableObject;
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
+            Console.WriteLine(newsform.ReceiveData);
+            tableObject.colomn1 = "hoge";
+            tableObject.colomn2 = "hoge";
+            tableObject.colomn3 = "hoge";
+            DataContext = tableObject;
         }
+       
     }
 
     public class TableClass
@@ -43,7 +47,7 @@ namespace DesktopMascot.SubScreens.Newsviewer
         public string colomn1 { get; set; }
         public string colomn2 { get; set; }
         public string colomn3 { get; set; }
+        
     }
-
 
 }

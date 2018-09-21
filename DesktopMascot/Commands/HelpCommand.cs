@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesktopMascot
 {
+    // ヘルプコマンド
     class HelpCommand : Command
     {
         private List<SubScreenMgr> subScreenMgrs;

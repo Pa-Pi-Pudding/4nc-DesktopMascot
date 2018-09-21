@@ -11,7 +11,7 @@ namespace DesktopMascot
     {
         // テスト用ListsMaker
 
-        public TestListsMaker(Controller controller) : base(controller)
+        public TestListsMaker(Controller controller, CharacterInitializer characterInitializer) : base(controller, characterInitializer)
         {
             // メンバ変数の初期化
             mainScreenMgrList = new List<MainScreenMgr>();
@@ -29,7 +29,7 @@ namespace DesktopMascot
             // 全てのCharacterSetを生成し、Listに入れる
             // IDと名前も同時に記録しておく
             // 1個目 コンストラクタ
-            bufCharaSet = new TestCharacterSet(0, controller);
+            bufCharaSet = new TestCharacterSet(0, controller, characterInitializer);
             characterSetList.Add(bufCharaSet);
             // 2個目 IDと名前
             bufIDAndName.id = bufCharaSet.getId();
@@ -44,6 +44,8 @@ namespace DesktopMascot
             bufSubScrMgr = new TestSubScreen2(1);
             subScreenMgrList.Add(bufSubScrMgr);
             bufSubScrMgr = new NewsViewer(2);
+            subScreenMgrList.Add(bufSubScrMgr);
+            bufSubScrMgr = new WeatherScreen(3);
             subScreenMgrList.Add(bufSubScrMgr);
 
 

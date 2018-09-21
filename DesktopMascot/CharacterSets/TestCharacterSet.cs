@@ -8,39 +8,60 @@ namespace DesktopMascot
 {
     class TestCharacterSet : CharacterSet
     {
+        // ここの変数はテスト用　コピペしないで
         TestCharacter1Form bufForm;
         int counter;
         Random rnd;
 
-        public TestCharacterSet(int id, Controller controller) : base(id, controller)
+        public TestCharacterSet(int id, Controller controller, CharacterInitializer characterInitializer) : base(id, controller, characterInitializer)
         {
-            counter = 0;
+            // 必須
             characterName = "TestCharacter1";
+
+            // テスト用　コピペしないで
+            counter = 0;
             rnd = new Random();
         }
 
         public override void start()
         {
             // ここでフォームを生成する
-            this.form = this.bufForm = new TestCharacter1Form();
+            // フォームのコンストラクタにCharacterInitializerを渡せるようにしないとキャラクターを掴んで移動できない
+            // 本来は以下のような感じになる
+            // this.form = new TestCharacter1Form(characterInitializer);
+            this.form = this.bufForm = new TestCharacter1Form(characterInitializer);
 
+            // ここはそのままでOK
             this.form.TopLevel = false;
             this.controller.Controls.Add(form);
             this.form.Show();
             this.form.Visible = true;
-            this.form.Location = new System.Drawing.Point(290, 90);
             this.form.BringToFront();
+
+            // 画像のサイズによって適宜変更する必要あり
+            this.form.Location = new System.Drawing.Point(290, 90);
+
+
+            // テスト用　コピペしないで
+            //this.bufForm = new TestCharacter1Form(characterInitializer);
 
             return;
         }
 
         public override void stop()
         {
+            // コピペでOK
             this.form.Close();
-            this.form = this.bufForm = null;
+            this.form = null;
+
+            // テスト用　コピペしないで
+            this.bufForm = null;
             return;
         }
 
+
+        // 以下はキャラクターごとの処理
+        // メソッド名はそのままで、処理は適宜変えてください
         public override Reaction getTestReaction()
         {
             // ここの中の処理はマネしないように

@@ -58,6 +58,7 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.BackColor = System.Drawing.SystemColors.Window;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(14, 13);
             this.panel1.Name = "panel1";
@@ -94,6 +95,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ConsoleScreenForm";
             this.Text = "ConsoleScreenForm";
             this.Load += new System.EventHandler(this.ConsoleScreenForm_Load);

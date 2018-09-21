@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+// 使わなかった
 namespace DesktopMascot.SubScreens.Newsviewer
 {
     /// <summary>
@@ -33,7 +33,6 @@ namespace DesktopMascot.SubScreens.Newsviewer
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            Console.WriteLine(newsform.ReceiveData);
             tableObject.colomn1 = "hoge";
             tableObject.colomn2 = "hoge";
             tableObject.colomn3 = "hoge";

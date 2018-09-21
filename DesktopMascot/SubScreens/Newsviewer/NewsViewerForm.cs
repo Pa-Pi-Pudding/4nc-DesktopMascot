@@ -27,63 +27,154 @@ namespace DesktopMascot
            
         }
         
-        public string ReceiveData { get; set; }
 
         private void NewsViewerForm_Load(object sender, EventArgs e)
         {
 
         }
-        private void GetRssFeed(string url)
+
+        private void NewsViewerForm_Load_1(object sender, EventArgs e)
         {
-　　　　　　using (XmlReader rdr = XmlReader.Create(url))
 
-　　　　　　{
-                int fontsize = 9;
-                Graphics formGraphics = this.CreateGraphics();
-                formGraphics.Clear(Color.WhiteSmoke);
-                Font drawFont = new System.Drawing.Font("Arial", fontsize);
-                SolidBrush drawBrush = new System.Drawing.SolidBrush(System.Drawing.Color.Black);
-                float x = 0F;
-                float y = 0F;
-                
-                StringFormat drawFormat = new System.Drawing.StringFormat();
-            
-                RectangleF rect = new RectangleF(x, y, Width, Height);
-　　　　　　　　SyndicationFeed feed = SyndicationFeed.Load(rdr);
-
-                formGraphics.DrawRectangle(Pens.Black, Rectangle.Round(rect));
-　　　　　　　　foreach (SyndicationItem item in feed.Items)
-　　　　　　　　{
-　　　　　　　　　　Console.WriteLine("description:" + item.Summary.Text);
-//                    Console.WriteLine("link:" + item.Links[0].Uri);
-                    formGraphics.DrawString( item.Title.Text + "\r\n"
-                        //+ item.Summary.Text + "\r\n"
-                        + item.Links[0].Uri +"\r\n"
-                        + item.PublishDate + "\r\n"
-                        , drawFont, drawBrush, rect, drawFormat);
-                    rect.Y += (fontsize*11+3);
-                    formGraphics.DrawRectangle(Pens.Black, Rectangle.Round(rect));
-                }
-                drawFont.Dispose();
-                drawBrush.Dispose();
-                formGraphics.Dispose();
-　　　　　　}
         }
 
-       
-        private void Anime_Click(object sender, EventArgs e)
+        private void tabPage1_Click(object sender, EventArgs e)
         {
-            string sendUrl = @"https://www.4gamer.net/rss/news_topics.xml";
-            ReceiveData = sendUrl;
-            Newsview viewer = new Newsview(sendUrl);
+
+        }
+        // TODO: HTMLタグの消去ができないので,利用できるRSSが限られている
+        //
+        // Game tab method
+        //
+        private void Gamer_Click(object sender, EventArgs e)
+        {
+            string sendRssUrl = @"https://www.4gamer.net/rss/news_topics.xml";
+            int MethodFlag = 0;
+            Newsview viewer = new Newsview(sendRssUrl,MethodFlag);
+            viewer.Show();
+        }    
+        private void Gamedrive_Click(object sender, EventArgs e)
+        {
+            string sendRssUrl = @"https://gamedrive.jp/feed";
+            int MethodFlag = 0;
+            Newsview viewer = new Newsview(sendRssUrl,MethodFlag);
+            viewer.Show();
+            
+        }
+        private void doope_Click(object sender, EventArgs e)
+        {
+            string sendRssUrl = @"https://doope.jp/feed/";
+            int MethodFlag = 1;
+            Newsview viewer = new Newsview(sendRssUrl,MethodFlag);
+            viewer.Show();
+            
+        }
+
+        private void famicoroti_Click(object sender, EventArgs e)
+        {
+            string sendRssUrl = @"http://famicoroti.blog81.fc2.com/?xml";
+            int MethodFlag = 0;
+            Newsview viewer = new Newsview(sendRssUrl,MethodFlag);
             viewer.Show();
 
         }
 
-        private void Game_Click(object sender, EventArgs e)
+        private void button15_Click(object sender, EventArgs e)
         {
-            string url = @"https://www.4gamer.net/rss/news_topics.xml";
-            //GetRssXml(url);
+            string sendRssUrl = @"";
+            int MethodFlag = 1;
+            Newsview viewer = new Newsview(sendRssUrl,MethodFlag);
+            viewer.Show();
         }
+
+        //
+        // Anime tab method
+        //
+
+        private void zaikei_anime_Click(object sender, EventArgs e)
+        {
+            string sendRssUrl = @"https://www.zaikei.co.jp/rss/topics/449.xml";
+            int MethodFlag = 1;
+            Newsview viewer = new Newsview(sendRssUrl,MethodFlag);
+            viewer.Show();
+
+        }
+        private void AkibaBlog_Click(object sender, EventArgs e)
+        {
+            string sendRssUrl = @"http://blog.livedoor.jp/geek/index.rdf";
+            int MethodFlag = 0;
+            Newsview viewer = new Newsview(sendRssUrl,MethodFlag);
+            viewer.Show();
+        }
+
+        private void WebNewtype_Click(object sender, EventArgs e)
+        {
+            string sendRssUrl = @"https://webnewtype.com/xml/";
+            int MethodFlag = 1;
+            Newsview viewer = new Newsview(sendRssUrl,MethodFlag);
+            viewer.Show();
+        }
+
+        private void Animehack_Click(object sender, EventArgs e)
+        {
+            string sendRssUrl = @"http://feeds.eiga.com/animehack-news";
+            int MethodFlag = 1;
+            Newsview viewer = new Newsview(sendRssUrl,MethodFlag);
+            viewer.Show();
+        }
+
+        private void moca_Click(object sender, EventArgs e)
+        {
+            string sendRssUrl = @"https://moca-news.net/index.xml";
+            int MethodFlag = 0;
+            Newsview viewer = new Newsview(sendRssUrl,MethodFlag);
+            viewer.Show();
+        }
+
+        //
+        // IT tab method
+        //
+
+        private void codezine_Click(object sender, EventArgs e)
+        {
+            string sendRssUrl = @"https://codezine.jp/rss/new/20/index.xml";
+            int MethodFlag = 1;
+            Newsview viewer = new Newsview(sendRssUrl,MethodFlag);
+            viewer.Show();
+
+        }
+
+        private void Itmedia_total_Click(object sender, EventArgs e)
+        {
+            string sendRssUrl = @"https://rss.itmedia.co.jp/rss/2.0/ait.xml";
+            int MethodFlag = 1;
+            Newsview viewer = new Newsview(sendRssUrl,MethodFlag);
+            viewer.Show();
+        }
+
+        private void gizmodo_Click(object sender, EventArgs e)
+        {
+            string sendRssUrl = @"https://www.gizmodo.jp/index.xml";
+            int MethodFlag = 1;
+            Newsview viewer = new Newsview(sendRssUrl,MethodFlag);
+            viewer.Show();
+        }
+
+        private void Itmedia_linux_Click(object sender, EventArgs e)
+        {
+            string sendRssUrl = @"https://rss.itmedia.co.jp/rss/2.0/ait_linux.xml";
+            int MethodFlag = 1;
+            Newsview viewer = new Newsview(sendRssUrl,MethodFlag);
+            viewer.Show();
+        }
+
+        private void Itmedia_Html_UX_Click(object sender, EventArgs e)
+        {
+            string sendRssUrl = @"https://rss.itmedia.co.jp/rss/2.0/ait_ux.xml";
+            int MethodFlag = 1;
+            Newsview viewer = new Newsview(sendRssUrl,MethodFlag);
+            viewer.Show();
+        }
+
     }
 }

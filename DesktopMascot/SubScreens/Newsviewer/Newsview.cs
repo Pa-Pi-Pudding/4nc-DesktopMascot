@@ -13,16 +13,17 @@ using System.ServiceModel.Syndication;
 
 namespace DesktopMascot
 {
-    public partial class Newsview: Form
+    public partial class Newsview : Form
     {
 
         private String URL;
+        private int MethodFlag;
         private System.Windows.Forms.RichTextBox[] richTextBoxes;
-        RichTextBox[] textBoxArray;
-        public Newsview(String ReceiveURL)
+        public Newsview(String URL, int MethodFlag)
         {
             InitializeComponent();
-            URL = ReceiveURL;
+            this.URL = URL;
+            this.MethodFlag = MethodFlag;
 
         }
 
@@ -33,24 +34,52 @@ namespace DesktopMascot
 
         private void Newsview_Load(object sender, EventArgs e)
         {
-            this.richTextBoxes = new RichTextBox[7];
+            this.richTextBoxes = new RichTextBox[6];
             this.richTextBoxes[0] = this.richTextBox1;
             this.richTextBoxes[1] = this.richTextBox2;
             this.richTextBoxes[2] = this.richTextBox3;
             this.richTextBoxes[3] = this.richTextBox4;
             this.richTextBoxes[4] = this.richTextBox5;
             this.richTextBoxes[5] = this.richTextBox6;
-            GetRssXml(URL, 0);
-            GetRssXml(URL, 1);
-            GetRssXml(URL, 2);
-            GetRssXml(URL, 3);
-            GetRssXml(URL, 4);
-            GetRssXml(URL, 5);
+
+            if (MethodFlag == 0)
+            {
+                GetRssXml(URL, 0);
+                GetRssXml(URL, 1);
+                GetRssXml(URL, 2);
+                GetRssXml(URL, 3);
+                GetRssXml(URL, 4);
+                GetRssXml(URL, 5);
+            }
+            else if  (MethodFlag == 1)
+            {
+
+                GetRssFeed(URL, 0);
+                GetRssFeed(URL, 1);
+                GetRssFeed(URL, 2);
+                GetRssFeed(URL, 3);
+                GetRssFeed(URL, 4);
+                GetRssFeed(URL, 5);
+            }
         }
 
-         private void GetRssXml(string url, int colomnn){
+        // クリックされたリンクをブラウザで開きます
+        private void richTextBox_LinkClicked(object sender, LinkClickedEventArgs e)
+        {
+            
+            try
             {
-               
+                System.Diagnostics.Process.Start(e.LinkText);
+            }
+            catch
+            {
+            }
+        }
+
+        protected internal void GetRssXml(string url, int colomn)
+        {
+            {
+
                 var xml = new XmlDocument();
                 int count = 0;
                 xml.Load(url);
@@ -59,25 +88,50 @@ namespace DesktopMascot
                 nsmgr.AddNamespace("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#");
                 nsmgr.AddNamespace("rss", "http://purl.org/rss/1.0/");
                 nsmgr.AddNamespace("dc", "http://purl.org/dc/elements/1.1/");
-              
-                  foreach (XmlElement node in xml.SelectNodes("/rdf:RDF/rss:item", nsmgr))
-                  {
-                    
+
+                foreach (XmlElement node in xml.SelectNodes("/rdf:RDF/rss:item", nsmgr))
+                {
+
                     var title = node.SelectNodes("rss:title", nsmgr)[0].InnerText;
                     var link = node.SelectNodes("rss:link", nsmgr)[0].InnerText;
                     var description = node.SelectNodes("rss:description", nsmgr)[0].InnerText;
+
                     var date = DateTime.Parse(node.SelectNodes("dc:date", nsmgr)[0].InnerText);
 
-                    if (count == colomnn)
+                    if (count == colomn)
                     {
-                    richTextBoxes[colomnn].Text = title + "\n" + link +  description ;
-                    this.Controls.Add(this.richTextBoxes[colomnn]);
+                        richTextBoxes[colomn].Text = title + "\n" + link + description;
+                        this.Controls.Add(this.richTextBoxes[colomn]);
                     }
-
-                    count ++ ;
-                  }
+                    count++;
+                }
 
             }
         }
+
+        protected internal void GetRssFeed(string url, int colomn)
+        {
+            using (XmlReader rdr = XmlReader.Create(url))
+
+            {
+                SyndicationFeed feed = SyndicationFeed.Load(rdr);
+
+                int count = 0;
+                foreach (SyndicationItem item in feed.Items)
+                {
+
+                    var title = item.Title.Text;
+                    var link = item.Links[0].Uri;
+                    var description = item.Summary.Text;
+                    if (count == colomn)
+                    {
+                        richTextBoxes[colomn].Text = title + "\n" + link + description; 
+                        this.Controls.Add(this.richTextBoxes[colomn]);
+                    }
+                    count++;
+                }
+            }
+        }
+
     }
 }

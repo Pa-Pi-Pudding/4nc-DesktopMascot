@@ -27,7 +27,9 @@ namespace DesktopMascot
         {
             // ここでフォームを生成する
             // フォームのコンストラクタにCharacterInitializerを渡せるようにしないとキャラクターを掴んで移動できない
-            this.form = new TestCharacter1Form(characterInitializer);
+            // 本来は以下のような感じになる
+            // this.form = new TestCharacter1Form(characterInitializer);
+            this.form = this.bufForm = new TestCharacter1Form(characterInitializer);
 
             // ここはそのままでOK
             this.form.TopLevel = false;
@@ -41,7 +43,7 @@ namespace DesktopMascot
 
 
             // テスト用　コピペしないで
-            this.bufForm = new TestCharacter1Form(characterInitializer);
+            //this.bufForm = new TestCharacter1Form(characterInitializer);
 
             return;
         }

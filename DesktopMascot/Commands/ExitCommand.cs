@@ -14,10 +14,11 @@ namespace DesktopMascot
             this.controller = controller;
         }
 
-        public override Reaction execute(List<String> args, CharacterSet characterSet)
+        public override Reaction execute(String[] args, CharacterSet characterSet)
         {
             Reaction bufReact;
             bufReact = new Reaction();
+            bufReact.message = "まだ何もしないよ";
             return bufReact;
         }
     }

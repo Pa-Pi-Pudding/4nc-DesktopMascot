@@ -17,7 +17,8 @@ namespace DesktopMascot
             this.executeName = executeName;
         }
 
+        public int getId() { return this.id; }
         public String getExecuteName() { return this.executeName; }
-        public abstract Reaction execute(List<String> args, CharacterSet characterSet);
+        public abstract Reaction execute(String[] args, CharacterSet characterSet);
     }
 }

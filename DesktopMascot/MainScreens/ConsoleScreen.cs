@@ -8,13 +8,13 @@ namespace DesktopMascot
 {
     class ConsoleScreen : MainScreenMgr
     {
-        public ConsoleScreen(int id, List<SubScreenMgr> subScreenMgrList, Controller controller) : base(id, subScreenMgrList, controller)
+        public ConsoleScreen(int id, List<SubScreenMgr> subScreenMgrList, Controller controller, List<Command> commandList) : base(id, subScreenMgrList, controller, commandList)
         {
             // コンストラクタでスクリーンの名前を設定する
             this.screenName = "ConsoleScreen";
 
             // 作ったフォームを生成する
-            this.form = new ConsoleScreenForm(subScreenMgrList, this.characterSet);
+            this.form = new ConsoleScreenForm(subScreenMgrList, this.characterSet, commandList);
 
             // このタイミングで呼び出し
             // コンストラクタ以外でこのinitializeを呼び出しても無駄になる

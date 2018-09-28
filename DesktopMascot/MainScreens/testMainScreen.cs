@@ -8,7 +8,7 @@ namespace DesktopMascot
 {
     class TestMainScreen : MainScreenMgr
     {
-        public TestMainScreen(int id, List<SubScreenMgr> subScreenMgrList, Controller controller) : base(id, subScreenMgrList, controller)
+        public TestMainScreen(int id, List<SubScreenMgr> subScreenMgrList, Controller controller, List<Command> commandList) : base(id, subScreenMgrList, controller, commandList)
         {
             // コンストラクタでスクリーンの名前を設定する
             this.screenName = "TestName1";

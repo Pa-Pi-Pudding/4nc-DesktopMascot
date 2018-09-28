@@ -9,17 +9,28 @@ namespace DesktopMascot
     // ヘルプコマンド
     class HelpCommand : Command
     {
-        private List<SubScreenMgr> subScreenMgrs;
-        public HelpCommand(int id, String executeName, List<SubScreenMgr> subScreenMgrs) : base(id, executeName)
+        private List<SubScreenMgr> subScreenMgrList;
+        public HelpCommand(int id, String executeName, List<SubScreenMgr> subScreenMgrList) : base(id, executeName)
         {
-            this.subScreenMgrs = subScreenMgrs;
+            this.subScreenMgrList = subScreenMgrList;
         }
 
-        public override Reaction execute(List<String> args, CharacterSet characterSet)
+        public override Reaction execute(String[] args, CharacterSet characterSet)
         {
-            Reaction bufReact;
-            bufReact = new Reaction();
-            return bufReact;
+            Reaction mainReact = new Reaction();
+            Reaction bufReact = new Reaction();
+
+            bufReact = characterSet.getFuncAllDisplayReaction();
+            mainReact.message += bufReact.subMessage + "\n\r" + "\n\r";
+            foreach (SubScreenMgr item in subScreenMgrList)
+            {
+                mainReact.message += item.getName() + "\t" + "..." + item.getDescription() + "\n\r";
+            }
+            mainReact.message += "\n\r";
+
+            mainReact.message += bufReact.message;
+
+            return mainReact;
         }
     }
 }

@@ -42,15 +42,20 @@ namespace DesktopMascot
             mainScreenMgrIdAndNameList = listsMaker.getMainScreenMgrIDAndNameList();
             characterSetIdAndNameList = listsMaker.getCharacterSetIDAndNameList();
 
+
+
+
             InitializeComponent();
         }
 
         private void Controller_Load(object sender, EventArgs e)
         {
+            
+            // 最初に表示するキャラクターをスタートする
+            characterSetList[1].start();
+
             // 最初に表示するMainScreenをStartする
             mainScreenMgrList[1].start();
-            // 最初に表示するキャラクターをスタートする
-            characterSetList[0].start();
         }
 
         //↓↓↓↓マウスによるウィンドウ移動操作Start↓↓↓↓

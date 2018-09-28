@@ -27,6 +27,9 @@ namespace DesktopMascot
 
         private void ConsoleScreenForm_Load(object sender, EventArgs e)
         {
+            //背景透過
+            //FromのBackColorコントロールの値を透過色としている。
+            this.TransparencyKey = BackColor;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -102,6 +105,11 @@ namespace DesktopMascot
             {
                 button1_Click(sender, e);
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

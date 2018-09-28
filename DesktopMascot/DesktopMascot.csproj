@@ -63,6 +63,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CharacterSets\Character1Set.cs" />
+    <Compile Include="CharacterSets\Character1Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CharacterSets\Character1Form.Designer.cs">
+      <DependentUpon>Character1Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="CharacterSets\CharacterInitializer.cs" />
     <Compile Include="CharacterSets\CharacterSet.cs" />
     <Compile Include="MainScreens\ConsoleScreen.cs" />
@@ -128,6 +135,9 @@
     <Compile Include="SubScreens\WeatherScreenForm.Designer.cs">
       <DependentUpon>WeatherScreenForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CharacterSets\Character1Form.resx">
+      <DependentUpon>Character1Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainScreens\ConsoleScreenForm.resx">
       <DependentUpon>ConsoleScreenForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -197,6 +207,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\TestCharacter1_surprised.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Character1_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Character1.2_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Character1.2_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Character1.2_11.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

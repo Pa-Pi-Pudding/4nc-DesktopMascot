@@ -85,11 +85,13 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // ConsoleScreenForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
             this.ClientSize = new System.Drawing.Size(268, 337);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
@@ -98,6 +100,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ConsoleScreenForm";
             this.Text = "ConsoleScreenForm";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.ConsoleScreenForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -28,6 +28,8 @@ namespace DesktopMascot
 
             // 全てのCharacterSetを生成し、Listに入れる
             // IDと名前も同時に記録しておく
+
+            //テストキャラクターくん
             // 1個目 コンストラクタ
             bufCharaSet = new TestCharacterSet(0, controller, characterInitializer);
             characterSetList.Add(bufCharaSet);
@@ -35,6 +37,16 @@ namespace DesktopMascot
             bufIDAndName.id = bufCharaSet.getId();
             bufIDAndName.name = bufCharaSet.getName();
             characterSetIdAndNameList.Add(bufIDAndName);
+
+            //キャラクタ2体目
+            // 1個目 コンストラクタ
+            bufCharaSet = new Character1Set(1, controller, characterInitializer);
+            characterSetList.Add(bufCharaSet);
+            // 2個目 IDと名前
+            bufIDAndName.id = bufCharaSet.getId();
+            bufIDAndName.name = bufCharaSet.getName();
+            characterSetIdAndNameList.Add(bufIDAndName);
+
 
 
             // 全てのSubScreenMgrを生成し、Listに入れる

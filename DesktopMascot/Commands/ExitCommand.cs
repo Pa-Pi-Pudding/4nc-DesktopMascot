@@ -18,7 +18,9 @@ namespace DesktopMascot
         {
             Reaction bufReact;
             bufReact = new Reaction();
-            bufReact.message = "まだ何もしないよ";
+            bufReact.message = "no message";
+
+            this.controller.endApplication();
             return bufReact;
         }
     }

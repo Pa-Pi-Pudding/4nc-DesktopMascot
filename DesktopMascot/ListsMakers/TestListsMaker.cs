@@ -53,6 +53,8 @@ namespace DesktopMascot
             // 全てのCommandを生成し、Listに入れる
             bufCommand = new HelpCommand(0, "help", subScreenMgrList);
             commandList.Add(bufCommand);
+            bufCommand = new ExitCommand(1, "exit", controller);
+            commandList.Add(bufCommand);
 
             // 全てのMainScreenMgrを生成し、Listに入れる
             // コンストラクタのID番号は取りあえず0で設定している

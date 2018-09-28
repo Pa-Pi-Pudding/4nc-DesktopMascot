@@ -53,6 +53,11 @@ namespace DesktopMascot
             characterSetList[0].start();
         }
 
+        public void endApplication()
+        {
+            this.Close();
+        }
+
         //↓↓↓↓マウスによるウィンドウ移動操作Start↓↓↓↓
 
         //移動前のマウスの位置

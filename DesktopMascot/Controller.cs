@@ -58,6 +58,11 @@ namespace DesktopMascot
             mainScreenMgrList[1].start();
         }
 
+        public void endApplication()
+        {
+            this.Close();
+        }
+
         //↓↓↓↓マウスによるウィンドウ移動操作Start↓↓↓↓
 
         //移動前のマウスの位置

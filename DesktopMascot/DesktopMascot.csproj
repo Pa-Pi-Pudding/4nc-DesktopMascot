@@ -72,6 +72,9 @@
     </Compile>
     <Compile Include="CharacterSets\CharacterInitializer.cs" />
     <Compile Include="CharacterSets\CharacterSet.cs" />
+    <Compile Include="Commands\Command.cs" />
+    <Compile Include="Commands\ExitCommand.cs" />
+    <Compile Include="Commands\HelpCommand.cs" />
     <Compile Include="MainScreens\ConsoleScreen.cs" />
     <Compile Include="MainScreens\ConsoleScreenForm.cs">
       <SubType>Form</SubType>

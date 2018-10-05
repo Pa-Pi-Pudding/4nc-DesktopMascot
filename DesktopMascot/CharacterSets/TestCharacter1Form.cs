@@ -24,9 +24,13 @@ namespace DesktopMascot
             animeCounter = 0;
             InitializeComponent();
 
-            // 最後に呼び出すこと（正確にはInitializeComponentの後に呼び出す）
-            // これを呼び出さないと掴んで移動が出来ない
+            // 以下は最後に呼び出すこと（正確にはInitializeComponentの後に呼び出す）
+
+            // 掴んで移動が出来るようになる
             characterInitializer.initCharaPictureBox(pictureBox1);
+            // 右クリックでコンテキストメニューを表示できるようになる
+            characterInitializer.addContextMenu(this.contextMenuStrip1);
+
         }
 
         public void setHelloAnimation()
@@ -102,6 +106,11 @@ namespace DesktopMascot
             }
 
             return;
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }

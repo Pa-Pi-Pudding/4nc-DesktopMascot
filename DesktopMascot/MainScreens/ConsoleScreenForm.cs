@@ -14,14 +14,15 @@ namespace DesktopMascot
     {
         private String newLineCode = "\n\r";
         private String userName = "testName";
-        private String helpCommand = "help";
         private CharacterSet characterSet;
+        private List<SubScreenMgr> subScreenMgrList;
+        private List<Command> commandList;
 
-        List<SubScreenMgr> subScreenMgrList;
-        public ConsoleScreenForm(List<SubScreenMgr> subScreenMgrList, CharacterSet characterSet)
+        public ConsoleScreenForm(List<SubScreenMgr> subScreenMgrList, CharacterSet characterSet, List<Command> commandList)
         {
             this.subScreenMgrList = subScreenMgrList;
             this.characterSet = characterSet;
+            this.commandList = commandList;
             InitializeComponent();
         }
 
@@ -42,19 +43,19 @@ namespace DesktopMascot
             String bufText = this.textBox1.Text;
             label1.Text += userName + ">" + bufText + newLineCode;
 
+            // コマンドの引数を分離
+            String[] bufCommandArgs = bufText.Split(' ');
+
             // 機能一覧を表示
             if (!isFinish)
             {
-                if(bufText == helpCommand)
+                foreach(Command item in commandList)
                 {
-                    bufReact = this.characterSet.getFuncAllDisplayReaction();
-                    serif += bufReact.subMessage + newLineCode + newLineCode;
-                    foreach(SubScreenMgr item in subScreenMgrList)
+                    if(bufCommandArgs[0] == item.getExecuteName())
                     {
-                        serif += item.getName() + "\t" + "..." + item.getDescription() + newLineCode;
+                        bufReact = item.execute(bufCommandArgs, this.characterSet);
+                        isFinish = true;
                     }
-                    serif += newLineCode;
-                    isFinish = true;
                 }
             }
 
@@ -63,7 +64,7 @@ namespace DesktopMascot
             {
                 foreach (SubScreenMgr item in subScreenMgrList)
                 {
-                    if (bufText == item.getName())
+                    if (bufCommandArgs[0] == item.getName())
                     {
                         isFinish = true;
                         item.start();
@@ -75,7 +76,7 @@ namespace DesktopMascot
             // 会話を検索
             if (!isFinish)
             {
-                bufReact = this.characterSet.getCommunicationReaction(bufText);
+                bufReact = this.characterSet.getCommunicationReaction(bufCommandArgs[0]);
             }
 
             serif += bufReact.message + newLineCode;

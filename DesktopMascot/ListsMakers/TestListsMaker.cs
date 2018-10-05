@@ -19,12 +19,14 @@ namespace DesktopMascot
             characterSetList = new List<CharacterSet>();
             mainScreenMgrIdAndNameList = new List<IDAndName>();
             characterSetIdAndNameList = new List<IDAndName>();
+            commandList = new List<Command>();
 
             // 一時的に確保しておく変数
             MainScreenMgr bufMainScrMgr;
             SubScreenMgr bufSubScrMgr;
             CharacterSet bufCharaSet;
             IDAndName bufIDAndName;
+<<<<<<< HEAD
 
             // 全てのCharacterSetを生成し、Listに入れる
             // IDと名前も同時に記録しておく
@@ -48,6 +50,9 @@ namespace DesktopMascot
             characterSetIdAndNameList.Add(bufIDAndName);
 
 
+=======
+            Command bufCommand;
+>>>>>>> Development_branch
 
             // 全てのSubScreenMgrを生成し、Listに入れる
             // コンストラクタのID番号は取りあえず0で設定している
@@ -60,12 +65,31 @@ namespace DesktopMascot
             bufSubScrMgr = new WeatherScreen(3);
             subScreenMgrList.Add(bufSubScrMgr);
 
+            // 全てのCommandを生成し、Listに入れる
+            bufCommand = new HelpCommand(0, "help", subScreenMgrList);
+            commandList.Add(bufCommand);
+            bufCommand = new ExitCommand(1, "exit", controller);
+            commandList.Add(bufCommand);
+
+            characterInitializer.setCommandList(commandList);
+
+            // 全てのCharacterSetを生成し、Listに入れる
+            // IDと名前も同時に記録しておく
+            // 1個目 コンストラクタ
+            bufCharaSet = new TestCharacterSet(0, controller, characterInitializer);
+            characterSetList.Add(bufCharaSet);
+            // 2個目 IDと名前
+            bufIDAndName.id = bufCharaSet.getId();
+            bufIDAndName.name = bufCharaSet.getName();
+            characterSetIdAndNameList.Add(bufIDAndName);
+
 
             // 全てのMainScreenMgrを生成し、Listに入れる
             // コンストラクタのID番号は取りあえず0で設定している
             // IDと名前も同時に記録しておく
             // 1個目 コンストラクタ
             bufMainScrMgr = new TestMainScreen(0, subScreenMgrList, controller);
+            bufMainScrMgr = new TestMainScreen(0, subScreenMgrList, controller, commandList);
             mainScreenMgrList.Add(bufMainScrMgr);
             // 1個目 IDと名前
             bufIDAndName.id = bufMainScrMgr.getId();
@@ -74,6 +98,7 @@ namespace DesktopMascot
 
             // 2個目 コンストラクタ
             bufMainScrMgr = new ConsoleScreen(1, subScreenMgrList, controller);
+            bufMainScrMgr = new ConsoleScreen(1, subScreenMgrList, controller, commandList);
             mainScreenMgrList.Add(bufMainScrMgr);
             // 2個目 IDと名前
             bufIDAndName.id = bufMainScrMgr.getId();

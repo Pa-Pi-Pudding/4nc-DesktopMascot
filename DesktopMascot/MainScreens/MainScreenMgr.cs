@@ -16,15 +16,17 @@ namespace DesktopMascot
         protected Controller controller;
         protected CharacterSet characterSet;
         protected List<SubScreenMgr> subScreenMgrList;
+        protected List<Command> commandList;
         private bool isInit;
 
         // メソッド
-        public MainScreenMgr(int id, List<SubScreenMgr> subScreenMgrList, Controller controller)
+        public MainScreenMgr(int id, List<SubScreenMgr> subScreenMgrList, Controller controller, List<Command> commandList)
         {
             this.screenId = id;
             this.screenName = null;
             this.form = null;
             this.subScreenMgrList = subScreenMgrList;
+            this.commandList = commandList;
             this.controller = controller;
             this.isInit = false;
         }

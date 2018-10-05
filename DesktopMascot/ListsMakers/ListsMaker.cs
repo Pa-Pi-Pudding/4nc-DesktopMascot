@@ -15,6 +15,7 @@ namespace DesktopMascot
         protected List<IDAndName> mainScreenMgrIdAndNameList;
         protected List<IDAndName> characterSetIdAndNameList;
         protected CharacterInitializer characterInitializer;
+        protected List<Command> commandList;
         protected Form controller;
 
         public ListsMaker(Controller controller, CharacterInitializer characterInitializer)
@@ -25,6 +26,7 @@ namespace DesktopMascot
             this.mainScreenMgrIdAndNameList = null;
             this.characterSetIdAndNameList = null;
             this.characterInitializer = characterInitializer;
+            this.commandList = null;
             this.controller = controller;
         }
 
@@ -65,6 +67,14 @@ namespace DesktopMascot
             if (characterSetIdAndNameList != null)
             {
                 return characterSetIdAndNameList;
+            }
+            return null;
+        }
+        public List<Command> getCommandList()
+        {
+            if(commandList != null)
+            {
+                return commandList;
             }
             return null;
         }

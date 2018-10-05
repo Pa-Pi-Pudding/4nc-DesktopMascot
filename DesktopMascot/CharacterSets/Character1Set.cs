@@ -122,6 +122,9 @@ namespace DesktopMascot
             return bufReact;
         }
 
+
+
+
         public override Reaction getFuncAllDisplayReaction()
         {
             Reaction bufReact = new Reaction();

@@ -27,11 +27,6 @@ namespace DesktopMascot
 
         }
 
-        private void elementHost1_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
-        {
-
-        }
-
         private void Newsview_Load(object sender, EventArgs e)
         {
             this.richTextBoxes = new RichTextBox[6];

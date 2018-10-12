@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DesktopMascot
 {
@@ -28,6 +29,26 @@ namespace DesktopMascot
 
             this.controller.endApplication();
             return bufReact;
+        }
+
+        public override ToolStripMenuItem getToolStripMenuItem()
+        {
+            ToolStripMenuItem bufTsi = new ToolStripMenuItem();
+
+            bufTsi.Text = this.executeName;
+            bufTsi.ToolTipText = this.description;
+            bufTsi.Click += this.contextMenuEvent;
+
+            return bufTsi;
+        }
+
+        public void contextMenuEvent(object sender, EventArgs e)
+        {
+            if (existForContextMenu)
+            {
+                execute(null, null);
+            }
+            return;
         }
     }
 }

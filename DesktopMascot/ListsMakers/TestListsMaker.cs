@@ -44,6 +44,8 @@ namespace DesktopMascot
             commandList.Add(bufCommand);
             bufCommand = new ExitCommand(1, "exit", controller);
             commandList.Add(bufCommand);
+            bufCommand = new CharacterChangeCommand(2, "characterchange", characterSetList, controller);
+            commandList.Add(bufCommand);
 
             characterInitializer.setCommandList(commandList);
 
@@ -77,22 +79,6 @@ namespace DesktopMascot
             bufIDAndName.name = bufMainScrMgr.getName();
             mainScreenMgrIdAndNameList.Add(bufIDAndName);
 
-
-
-            // MainScreenMgrとSubScreenMgrが利用するデフォルトキャラクターを設定する
-            // 使用されるスクリーン全てにキャラクターが設定されるようにする
-
-            // MainScreenMgrのデフォルトキャラクター設定
-            foreach (MainScreenMgr item in mainScreenMgrList)
-            {
-                item.setCharacterSet(characterSetList[0]);
-            }
-
-            // SubScreenMgrのデフォルトキャラクター設定
-            foreach (SubScreenMgr item in subScreenMgrList)
-            {
-                item.setCharacterSet(characterSetList[0]);
-            }
         }
 
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DesktopMascot
 {
@@ -26,14 +27,7 @@ namespace DesktopMascot
         public String getDescription() { return this.description; }
         public bool getExistForContextMenu() { return this.existForContextMenu; }
         public abstract Reaction execute(String[] args, CharacterSet characterSet);
-        public void contextMenuEvent(object sender, EventArgs e)
-        {
-            if (existForContextMenu)
-            {
-                execute(null, null);
-            }
-            return;
-        }
+        public virtual ToolStripMenuItem getToolStripMenuItem() { return null; }
 
     }
 }

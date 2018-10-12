@@ -60,10 +60,13 @@ namespace DesktopMascot
 
             foreach(Command item in commandListForContextMenu)
             {
-                ToolStripMenuItem bufTsi = new ToolStripMenuItem();
-                bufTsi.Text = item.getExecuteName();
-                bufTsi.ToolTipText = item.getDescription();
-                bufTsi.Click += item.contextMenuEvent;
+                ToolStripMenuItem bufTsi = item.getToolStripMenuItem();
+
+                if(bufTsi == null)
+                {
+                    continue;
+                }
+
                 targetContextMenuStrip.Items.Add(bufTsi);
             }
 

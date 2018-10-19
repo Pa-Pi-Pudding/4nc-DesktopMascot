@@ -27,6 +27,7 @@ namespace DesktopMascot
         {
             Reaction bufReact;
             bufReact = new Reaction();
+            int mainScreenId = -1;
 
             bufReact = characterSet.getErrorReaction();
 
@@ -40,9 +41,18 @@ namespace DesktopMascot
                 if(args[1] == item.getName())
                 {
                     bufReact = characterSet.getChangeMainScreenReaction(item.getName());
+                    mainScreenId = item.getId();
                     break;
                 }
             }
+
+            if(mainScreenId == -1)
+            {
+                return bufReact;
+            }
+
+            controller.endMainScreen();
+            controller.startMainScreen(mainScreenId);
 
             return bufReact;
         }

@@ -20,7 +20,8 @@ namespace DesktopMascot
         private List<IDAndName> characterSetIdAndNameList;
         private ListsMaker listsMaker;
         private CharacterInitializer characterInitializer;
-        private int defaultCharacterId;
+        private int defaultCharacterIndex;
+        private MainScreenMgr runningMainScr;
 
         // メソッド
         public List<IDAndName> getCharacterSetIdAndNameList() { return this.characterSetIdAndNameList;  }
@@ -44,12 +45,41 @@ namespace DesktopMascot
             }
             return;
         }
-        public void startMainScreen(int mainScreenId) { ; }
-        public void endMainScreen() { ; }
-        
+        public void startMainScreen(int mainScreenId)
+        {
+            if(mainScreenId == runningMainScr.getId())
+            {
+                return;
+            }
+
+            foreach(MainScreenMgr item in mainScreenMgrList)
+            {
+                if(item.getId() == mainScreenId)
+                {
+                    runningMainScr = item;
+                    break;
+                }
+            }
+
+            runningMainScr.start();
+            return;
+        }
+        public void endMainScreen()
+        {
+            if(runningMainScr == null)
+            {
+                return;
+            }
+
+            runningMainScr.stop();
+            runningMainScr = null;
+
+            return;
+        }
         public Controller()
         {
-            defaultCharacterId = 0;
+            defaultCharacterIndex = 0;
+            runningMainScr = null;
             // キャラクター初期化に使うInitializerを生成
             characterInitializer = new CharacterInitializer(new MouseEventHandler(pictureBox1_MouseDown), new MouseEventHandler(pictureBox1_MouseUp), new MouseEventHandler(pictureBox1_MouseMove), new EventHandler(pictureBox1_MouseCaptureChanged));
             // 必要なもの生成器を生成する
@@ -62,7 +92,7 @@ namespace DesktopMascot
             mainScreenMgrIdAndNameList = listsMaker.getMainScreenMgrIDAndNameList();
             characterSetIdAndNameList = listsMaker.getCharacterSetIDAndNameList();
 
-            changeCharacter(defaultCharacterId);
+            changeCharacter(defaultCharacterIndex);
 
             InitializeComponent();
         }
@@ -72,7 +102,7 @@ namespace DesktopMascot
             // 最初に表示するMainScreenをStartする
             mainScreenMgrList[1].start();
             // 最初に表示するキャラクターをスタートする
-            characterSetList[defaultCharacterId].start();
+            characterSetList[defaultCharacterIndex].start();
         }
 
         public void endApplication()

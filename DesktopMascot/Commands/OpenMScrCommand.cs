@@ -35,6 +35,7 @@ namespace DesktopMascot
                 if(args[1] == item.getName())
                 {
                     bufReact = characterSet.getChangeMainScreenReaction(item.getName());
+                    break;
                 }
             }
 

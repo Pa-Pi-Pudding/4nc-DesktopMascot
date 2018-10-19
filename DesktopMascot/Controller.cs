@@ -47,11 +47,6 @@ namespace DesktopMascot
         }
         public void startMainScreen(int mainScreenId)
         {
-            if(mainScreenId == runningMainScr.getId())
-            {
-                return;
-            }
-
             foreach(MainScreenMgr item in mainScreenMgrList)
             {
                 if(item.getId() == mainScreenId)
@@ -100,7 +95,8 @@ namespace DesktopMascot
         private void Controller_Load(object sender, EventArgs e)
         {
             // 最初に表示するMainScreenをStartする
-            mainScreenMgrList[1].start();
+            runningMainScr = mainScreenMgrList[1];
+            runningMainScr.start();
             // 最初に表示するキャラクターをスタートする
             characterSetList[defaultCharacterIndex].start();
         }

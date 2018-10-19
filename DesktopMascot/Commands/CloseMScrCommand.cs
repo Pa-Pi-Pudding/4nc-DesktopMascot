@@ -11,11 +11,9 @@ namespace DesktopMascot
     // そうでない場合はコピペ厳禁
     class CloseMScrCommand : Command
     {
-        private List<MainScreenMgr> mainScreenMgrList;
         private Controller controller;
-        public CloseMScrCommand(int id, String executeName, List<MainScreenMgr> mainScreenMgrList, Controller controller) : base(id, executeName)
+        public CloseMScrCommand(int id, String executeName, Controller controller) : base(id, executeName)
         {
-            this.mainScreenMgrList = mainScreenMgrList;
             this.controller = controller;
             this.description = "メインスクリーンを閉じます。";
 

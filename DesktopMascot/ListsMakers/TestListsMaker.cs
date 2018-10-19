@@ -46,7 +46,9 @@ namespace DesktopMascot
             commandList.Add(bufCommand);
             bufCommand = new CharacterChangeCommand(2, "characterchange", characterSetList, controller);
             commandList.Add(bufCommand);
-            bufCommand = new OpenMScrCommand(2, "openmainscreen", mainScreenMgrList, controller);
+            bufCommand = new OpenMScrCommand(3, "openmainscreen", mainScreenMgrList, controller);
+            commandList.Add(bufCommand);
+            bufCommand = new OpenMScrCommand(4, "closemainscreen", mainScreenMgrList, controller);
             commandList.Add(bufCommand);
 
             characterInitializer.setCommandList(commandList);

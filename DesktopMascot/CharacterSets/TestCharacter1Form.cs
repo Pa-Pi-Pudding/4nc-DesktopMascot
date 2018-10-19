@@ -63,7 +63,7 @@ namespace DesktopMascot
 
         private void TestCharacter1Form_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

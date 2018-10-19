@@ -42,6 +42,7 @@ namespace DesktopMascot
                         System.Text.Encoding.GetEncoding("shift_jis"));
 
                 Hashtable ht = new Hashtable();
+                Hashtable ht2 = new Hashtable();
 
                 //1行ずつ読み込む
 
@@ -57,10 +58,12 @@ namespace DesktopMascot
                     if (values[0] == "")
                     {
                         ht.Add("", "");
+                        ht2.Add("", "");
                     }
                     else
                     {
                         ht.Add(values[1], values[2]);
+                        ht2.Add(values[1], values[0]);
                     }
 
                 }//while end
@@ -71,7 +74,22 @@ namespace DesktopMascot
                 if (ht.ContainsKey(args[1]))
                 {
                     //存在する時
-                    MessageBox.Show("アクセスパスは\"" + ht[args[1]].ToString() + "\"です");
+                    //MessageBox.Show("アクセスパスは\"" + ht[args[1]].ToString() + "\"です");
+
+                    /*
+                    if (ht2[args[1]].ToString() == "Webサイト")
+                    {
+                        //Webサイトにアクセス
+                        System.Diagnostics.Process.Start(ht[args[1]].ToString());
+
+                    }
+                    else if(ht2[args[1]].ToString() == "ディレクトリ")
+                    {
+
+                    }
+                    */
+                    System.Diagnostics.Process.Start(ht[args[1]].ToString());
+
                 }
                 else
                 {

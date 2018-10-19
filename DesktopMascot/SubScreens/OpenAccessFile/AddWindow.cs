@@ -16,6 +16,9 @@ namespace DesktopMascot.SubScreens.OpenAccess
         public AddWindow()
         {
             InitializeComponent();
+
+            //ComboBoxの初期値の設定
+            this.comboBox1.SelectedIndex = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -32,6 +35,10 @@ namespace DesktopMascot.SubScreens.OpenAccess
             else if (textBox2.Text == "")
             {
                 MessageBox.Show("アクセスパスを入力して下さい。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (comboBox1.Text == "")
+            {
+                MessageBox.Show("種類項目を選択して下さい。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -104,15 +111,13 @@ namespace DesktopMascot.SubScreens.OpenAccess
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            //ComboBoxの初期値の設定
-            this.comboBox1.SelectedIndex = 0;
+            
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
-
     }
     
 }

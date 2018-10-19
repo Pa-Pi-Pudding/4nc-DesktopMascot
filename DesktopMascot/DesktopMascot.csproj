@@ -246,6 +246,23 @@
   <ItemGroup>
     <None Include="Resources\Character1.2_11.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\character1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\character1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\character1_toji.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\character1_hanme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\character1_hanme1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\character1_toji1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

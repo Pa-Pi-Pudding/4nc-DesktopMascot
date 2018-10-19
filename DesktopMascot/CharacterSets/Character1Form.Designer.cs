@@ -28,15 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.blink_timer = new System.Windows.Forms.Timer(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
+            // 
+            // blink_timer
+            // 
+            this.blink_timer.Enabled = true;
+            this.blink_timer.Interval = 50;
+            this.blink_timer.Tick += new System.EventHandler(this.blink_timer_Tick);
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = global::DesktopMascot.Properties.Resources.Character1_2_1;
+            this.pictureBox2.Image = global::DesktopMascot.Properties.Resources.character1;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(209, 371);
@@ -59,5 +67,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Timer blink_timer;
     }
 }

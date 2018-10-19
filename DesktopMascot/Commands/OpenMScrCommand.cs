@@ -30,6 +30,11 @@ namespace DesktopMascot
 
             bufReact = characterSet.getErrorReaction();
 
+            if(args.Length < 1)
+            {
+                return bufReact;
+            }
+
             foreach(MainScreenMgr item in mainScreenMgrList)
             {
                 if(args[1] == item.getName())

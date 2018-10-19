@@ -56,6 +56,7 @@ namespace DesktopMascot
                 dropDownTsi.Text = item.getName();
                 dropDownTsi.ToolTipText = "キャラクターを" + item.getName() + "に変更します";
                 dropDownTsi.Click += this.contextMenuEvent;
+                dropDownTsi.setCharacterId(item.getId());
 
                 bufTsi.DropDownItems.Add(dropDownTsi);
             }

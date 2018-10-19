@@ -12,9 +12,11 @@ namespace DesktopMascot
     class OpenMScrCommand : Command
     {
         private List<MainScreenMgr> mainScreenMgrList;
-        public OpenMScrCommand(int id, String executeName, List<MainScreenMgr> mainScreenMgrList) : base(id, executeName)
+        private Controller controller;
+        public OpenMScrCommand(int id, String executeName, List<MainScreenMgr> mainScreenMgrList, Controller controller) : base(id, executeName)
         {
             this.mainScreenMgrList = mainScreenMgrList;
+            this.controller = controller;
             this.description = "メインスクリーンを変更します。";
 
             // コンテキストメニューに存在するときだけコピペ
@@ -48,11 +50,12 @@ namespace DesktopMascot
 
             foreach (MainScreenMgr item in mainScreenMgrList)
             {
-                ToolStripMenuItem dropDownTsi = new ToolStripMenuItem();
+                ToolStripMenuItemWithMainScrInfo dropDownTsi = new ToolStripMenuItemWithMainScrInfo();
 
                 dropDownTsi.Text = item.getName();
-                dropDownTsi.ToolTipText = "キャラクターを" + item.getName() + "に変更します";
+                dropDownTsi.ToolTipText = "メインスクリーンを" + item.getName() + "に変更します";
                 dropDownTsi.Click += this.contextMenuEvent;
+                dropDownTsi.setMainScreenId(item.getId());
 
                 bufTsi.DropDownItems.Add(dropDownTsi);
             }
@@ -62,11 +65,20 @@ namespace DesktopMascot
 
         public void contextMenuEvent(object sender, EventArgs e)
         {
-            if (existForContextMenu)
-            {
-                execute(null, null);
-            }
+            ToolStripMenuItemWithMainScrInfo tsmiwmsi = (ToolStripMenuItemWithMainScrInfo)sender;
+            int mainScreenId = tsmiwmsi.getMainScreenId();
+
+            controller.endMainScreen();
+            controller.startMainScreen(mainScreenId);
+
             return;
+        }
+
+        private class ToolStripMenuItemWithMainScrInfo : ToolStripMenuItem
+        {
+            public int mainScreenId;
+            public void setMainScreenId(int id) { this.mainScreenId = id; }
+            public int getMainScreenId() { return mainScreenId; }
         }
     }
 }

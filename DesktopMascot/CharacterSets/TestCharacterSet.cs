@@ -91,6 +91,24 @@ namespace DesktopMascot
             return bufReact;
         }
 
+        public override Reaction getChangeMainScreenReaction(String screenName)
+        {
+            Reaction bufReact = new Reaction();
+            bufReact.message = screenName + "に変更します！";
+            bufForm.setHelloAnimation();
+
+            return bufReact;
+        }
+
+        public override Reaction getErrorReaction()
+        {
+            Reaction bufReact = new Reaction();
+            bufReact.message = "エラーみたいです。";
+            bufForm.setWhatAnimation();
+
+            return bufReact;
+        }
+
         public override Reaction getCommunicationReaction(String message)
         {
             Reaction bufReact = new Reaction();

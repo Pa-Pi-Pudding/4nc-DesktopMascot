@@ -30,7 +30,7 @@ namespace DesktopMascot
 
             bufReact = characterSet.getErrorReaction();
 
-            if(args.Length < 1)
+            if(args.Length < 2)
             {
                 return bufReact;
             }

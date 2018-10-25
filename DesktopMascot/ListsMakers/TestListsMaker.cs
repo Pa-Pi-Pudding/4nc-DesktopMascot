@@ -38,6 +38,8 @@ namespace DesktopMascot
             subScreenMgrList.Add(bufSubScrMgr);
             bufSubScrMgr = new WeatherScreen(3);
             subScreenMgrList.Add(bufSubScrMgr);
+            bufSubScrMgr = new TwitterViewer(4);
+            subScreenMgrList.Add(bufSubScrMgr);
 
             // 全てのCommandを生成し、Listに入れる
             bufCommand = new HelpCommand(0, "help", subScreenMgrList);

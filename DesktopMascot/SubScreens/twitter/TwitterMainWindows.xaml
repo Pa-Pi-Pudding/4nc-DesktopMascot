@@ -6,15 +6,14 @@
              xmlns:local="clr-namespace:DesktopMascot.SubScreens.twitter"
              mc:Ignorable="d" 
              d:DesignHeight="470.455" d:DesignWidth="664.773">
-    <Grid>
-        <Button x:Name="startSettingButton" Content="startSetting" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="99" Click="startSettingButton_Click"/>
-        <Label Content="Access here:" HorizontalAlignment="Left" Margin="114,10,0,0" VerticalAlignment="Top" Width="88"/>
-        <TextBox x:Name="pinUritextbox" HorizontalAlignment="Left" Height="23" Margin="207,10,0,0" VerticalAlignment="Top" Width="440"/>
-        <TextBox x:Name="pinTextbox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="67,48,0,0"/>
-        <Label Content="PIN:" HorizontalAlignment="Left" Margin="10,48,0,0" VerticalAlignment="Top" Width="52"/>
-        <Button x:Name="pinButton" Content="certificate" HorizontalAlignment="Left" Margin="207,47,0,0" VerticalAlignment="Top" Width="89" Click="pinButton_Click"/>
-        <TextBox x:Name="pinResultTextbox" HorizontalAlignment="Left" Height="23" Margin="329,48,0,0" Text="pinResultTextbox" VerticalAlignment="Top" Width="318"/>
-        <TextBox x:Name="timelineTextbox" HorizontalAlignment="Left" Height="169" Margin="10,105,0,0" Text="TextBox" VerticalAlignment="Top" Width="637" VerticalScrollBarVisibility="Auto"/>
-        <Button x:Name="showTimelineButton" Content="showTimeline" HorizontalAlignment="Left" Margin="10,76,0,0" VerticalAlignment="Top" Width="113" Click="showTimelineButton_Click"/>
-    </Grid>
+    <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Account:"/>
+            <Label x:Name="screennameLabel" Content="unregister" />
+            <Button x:Name="registButton" Content="regist"  Width="75" Click="registButton_Click"/>
+        </StackPanel>
+        <TextBox x:Name="viewTextBox" Text="TextBox" Height="225" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" />
+         
+        <Button x:Name="getTl" Content="getTl" Click="getTl_Click"/>
+    </StackPanel>
 </UserControl>

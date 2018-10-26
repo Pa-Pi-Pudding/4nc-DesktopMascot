@@ -84,5 +84,10 @@ namespace DesktopMascot.SubScreens.twitter
             }
 
         }
+
+        private void pinURITextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -12,6 +12,6 @@
         <Label Content="PIN:"/>
         <TextBox x:Name="pinTextBox" />
         <Button x:Name="okButton" Content="OK" IsDefault="True" Click="okButton_Click"/>
-        <Button x:Name="cancelButton" Content="Cancel" IsCancel="True" Click="cancelButton_Click"/>
+        <!--<Button x:Name="cancelButton" Content="Cancel" IsCancel="True" Click="cancelButton_Click"/>-->
     </StackPanel>
 </UserControl>

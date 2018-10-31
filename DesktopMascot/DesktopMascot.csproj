@@ -79,6 +79,13 @@
     <Compile Include="Commands\ExitCommand.cs" />
     <Compile Include="Commands\HelpCommand.cs" />
     <Compile Include="Commands\OpenMScrCommand.cs" />
+    <Compile Include="MainScreens\HitorigotoScreen.cs" />
+    <Compile Include="MainScreens\HitorigotoScreenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainScreens\HitorigotoScreenForm.Designer.cs">
+      <DependentUpon>HitorigotoScreenForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainScreens\ConsoleScreen.cs" />
     <Compile Include="MainScreens\ConsoleScreenForm.cs">
       <SubType>Form</SubType>
@@ -167,6 +174,9 @@
     <Compile Include="SubScreens\WeatherScreenForm.Designer.cs">
       <DependentUpon>WeatherScreenForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="MainScreens\HitorigotoScreenForm.resx">
+      <DependentUpon>HitorigotoScreenForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainScreens\ConsoleScreenForm.resx">
       <DependentUpon>ConsoleScreenForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -254,6 +264,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HitorigotoWindow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -63,6 +63,16 @@ namespace DesktopMascot.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap HitorigotoWindow {
+            get {
+                object obj = ResourceManager.GetObject("HitorigotoWindow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap Terminal {
             get {
                 object obj = ResourceManager.GetObject("Terminal", resourceCulture);

@@ -85,6 +85,15 @@ namespace DesktopMascot
             bufIDAndName.name = bufMainScrMgr.getName();
             mainScreenMgrIdAndNameList.Add(bufIDAndName);
 
+
+            //独り言ウィンドウ
+            // 3個目 コンストラクタ
+            bufMainScrMgr = new HitorigotoScreen(2, subScreenMgrList, controller, commandList);
+            mainScreenMgrList.Add(bufMainScrMgr);
+            // 3個目 IDと名前
+            bufIDAndName.id = bufMainScrMgr.getId();
+            bufIDAndName.name = bufMainScrMgr.getName();
+            mainScreenMgrIdAndNameList.Add(bufIDAndName);
         }
 
     }

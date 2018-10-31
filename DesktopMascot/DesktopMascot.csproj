@@ -121,7 +121,6 @@
     <Compile Include="SubScreens\Newsviewer\NewsViewerForm.Designer.cs">
       <DependentUpon>NewsViewerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SubScreens\NewsViewer.cs" />
     <Compile Include="SubScreens\OpenAccess.cs" />
     <Compile Include="SubScreens\OpenAccessForm.cs">
       <SubType>Form</SubType>

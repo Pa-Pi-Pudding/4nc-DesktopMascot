@@ -23,7 +23,6 @@ namespace DesktopMascot
 
         //アニメーション用
         enum AnimationMode { DEFAULT, HELLO, WHAT, ANGRY, SURPRISED };
-        private AnimationMode mode;
         //private int animeCounter;
         private int reaction_hold_time = 0;//インターバル50なので、1秒は20。
 

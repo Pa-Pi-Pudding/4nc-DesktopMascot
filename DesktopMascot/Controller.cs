@@ -94,10 +94,6 @@ namespace DesktopMascot
 
         private void Controller_Load(object sender, EventArgs e)
         {
-            
-            // 最初に表示するキャラクターをスタートする
-            characterSetList[1].start();
-
             // 最初に表示するMainScreenをStartする
             runningMainScr = mainScreenMgrList[1];
             runningMainScr.start();

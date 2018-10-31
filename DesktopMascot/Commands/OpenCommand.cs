@@ -11,7 +11,6 @@ namespace DesktopMascot
     // ヘルプコマンド
     class OpenCommand : Command
     {
-        private List<SubScreenMgr> subScreenMgrList;
 
         public OpenCommand(int id, String executeName): base(id, executeName)
         {

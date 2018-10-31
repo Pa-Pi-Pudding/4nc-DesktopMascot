@@ -32,14 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CoreTweet, Version=1.0.0.483, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CoreTweet.1.0.0.483\lib\net45\CoreTweet.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net.Http, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -58,7 +53,6 @@
       <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
     </Reference>
     <Reference Include="System.ServiceModel" />
-    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -67,8 +61,6 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="WindowsBase" />
-    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CharacterSets\CharacterInitializer.cs" />
@@ -128,25 +120,6 @@
     <Compile Include="SubScreens\TestSubScreenForm1.Designer.cs">
       <DependentUpon>TestSubScreenForm1.cs</DependentUpon>
     </Compile>
-    <Compile Include="SubScreens\twitter\RegistAccountWindow.xaml.cs">
-      <DependentUpon>RegistAccountWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="SubScreens\twitter\RegistAccountWindowForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SubScreens\twitter\RegistAccountWindowForm.Designer.cs">
-      <DependentUpon>RegistAccountWindowForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SubScreens\twitter\TwitterMainWindows.xaml.cs">
-      <DependentUpon>TwitterMainWindows.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="SubScreens\twitter\TwitterViewer.cs" />
-    <Compile Include="SubScreens\twitter\TwitterViewerForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SubScreens\twitter\TwitterViewerForm.Designer.cs">
-      <DependentUpon>TwitterViewerForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="SubScreens\WeatherScreen.cs" />
     <Compile Include="SubScreens\WeatherScreenForm.cs">
       <SubType>Form</SubType>
@@ -185,12 +158,6 @@
     <EmbeddedResource Include="SubScreens\TestSubScreenForm2.resx">
       <DependentUpon>TestSubScreenForm2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SubScreens\twitter\RegistAccountWindowForm.resx">
-      <DependentUpon>RegistAccountWindowForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SubScreens\twitter\TwitterViewerForm.resx">
-      <DependentUpon>TwitterViewerForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="SubScreens\WeatherScreenForm.resx">
       <DependentUpon>WeatherScreenForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,16 +192,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\TestCharacter1_surprised.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="SubScreens\twitter\RegistAccountWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="SubScreens\twitter\TwitterMainWindows.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

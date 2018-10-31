@@ -14,6 +14,6 @@
         </StackPanel>
         <TextBox x:Name="viewTextBox" Text="TextBox" Height="225" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" />
          
-        <Button x:Name="getTl" Content="getTl" Click="getTl_Click"/>
+        <Button x:Name="getTl" Content="getTl" Click="getTl_Click" Height="34"/>
     </StackPanel>
 </UserControl>

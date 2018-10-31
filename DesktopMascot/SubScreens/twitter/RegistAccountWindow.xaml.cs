@@ -44,9 +44,9 @@ namespace DesktopMascot.SubScreens.twitter
             }
         }
 
-        private void cancelButton_Click(object sender, RoutedEventArgs e)
-        {
-        }
+        //private void cancelButton_Click(object sender, RoutedEventArgs e)
+        //{
+        //}
 
         private void okButton_Click(object sender, RoutedEventArgs e)
         {
@@ -85,7 +85,7 @@ namespace DesktopMascot.SubScreens.twitter
 
         }
 
-        private void pinTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void pinURITextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }

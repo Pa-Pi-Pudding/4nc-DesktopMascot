@@ -71,6 +71,13 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CharacterSets\Character1Set.cs" />
+    <Compile Include="CharacterSets\Character1Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CharacterSets\Character1Form.Designer.cs">
+      <DependentUpon>Character1Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="CharacterSets\CharacterInitializer.cs" />
     <Compile Include="CharacterSets\CharacterSet.cs" />
     <Compile Include="Commands\CharacterChangeCommand.cs" />
@@ -78,6 +85,7 @@
     <Compile Include="Commands\Command.cs" />
     <Compile Include="Commands\ExitCommand.cs" />
     <Compile Include="Commands\HelpCommand.cs" />
+    <Compile Include="Commands\OpenCommand.cs" />
     <Compile Include="Commands\OpenMScrCommand.cs" />
     <Compile Include="MainScreens\HitorigotoScreen.cs" />
     <Compile Include="MainScreens\HitorigotoScreenForm.cs">
@@ -119,6 +127,19 @@
     </Compile>
     <Compile Include="SubScreens\Newsviewer\NewsViewerForm.Designer.cs">
       <DependentUpon>NewsViewerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubScreens\OpenAccess.cs" />
+    <Compile Include="SubScreens\OpenAccessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubScreens\OpenAccessForm.Designer.cs">
+      <DependentUpon>OpenAccessForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubScreens\OpenAccessFile\AddWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubScreens\OpenAccessFile\AddWindow.Designer.cs">
+      <DependentUpon>AddWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="SubScreens\TestSubScreenForm2.cs">
       <SubType>Form</SubType>
@@ -177,6 +198,9 @@
     <EmbeddedResource Include="MainScreens\HitorigotoScreenForm.resx">
       <DependentUpon>HitorigotoScreenForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CharacterSets\Character1Form.resx">
+      <DependentUpon>Character1Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainScreens\ConsoleScreenForm.resx">
       <DependentUpon>ConsoleScreenForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -207,6 +231,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SubScreens\Newsviewer\NewsViewerForm.resx">
       <DependentUpon>NewsViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubScreens\OpenAccessForm.resx">
+      <DependentUpon>OpenAccessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubScreens\OpenAccessFile\AddWindow.resx">
+      <DependentUpon>AddWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubScreens\TestSubScreenForm1.resx">
       <DependentUpon>TestSubScreenForm1.cs</DependentUpon>
@@ -254,6 +284,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\TestCharacter1_surprised.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Character1_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Character1.2_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Character1.2_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Character1.2_11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\character1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\character1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\character1_toji.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\character1_hanme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\character1_hanme1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\character1_toji1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\character1_smile.png" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="SubScreens\twitter\RegistAccountWindow.xaml">

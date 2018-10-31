@@ -27,7 +27,7 @@ namespace DesktopMascot
             CharacterSet bufCharaSet;
             IDAndName bufIDAndName;
             Command bufCommand;
-
+            
             // 全てのSubScreenMgrを生成し、Listに入れる
             // コンストラクタのID番号は取りあえず0で設定している
             bufSubScrMgr = new TestSubScreen(0);
@@ -39,6 +39,8 @@ namespace DesktopMascot
             bufSubScrMgr = new Newsviewer(3);
             subScreenMgrList.Add(bufSubScrMgr);
             bufSubScrMgr = new TwitterViewer(4);
+            subScreenMgrList.Add(bufSubScrMgr);
+            bufSubScrMgr = new OpenAccess(4);
             subScreenMgrList.Add(bufSubScrMgr);
 
             // 全てのCommandを生成し、Listに入れる
@@ -52,6 +54,9 @@ namespace DesktopMascot
             commandList.Add(bufCommand);
             bufCommand = new CloseMScrCommand(4, "closemainscreen", controller);
             commandList.Add(bufCommand);
+            bufCommand = new OpenCommand(5, "open");
+            commandList.Add(bufCommand);
+
 
             characterInitializer.setCommandList(commandList);
 
@@ -59,6 +64,15 @@ namespace DesktopMascot
             // IDと名前も同時に記録しておく
             // 1個目 コンストラクタ
             bufCharaSet = new TestCharacterSet(0, controller, characterInitializer);
+            characterSetList.Add(bufCharaSet);
+            // 2個目 IDと名前
+            bufIDAndName.id = bufCharaSet.getId();
+            bufIDAndName.name = bufCharaSet.getName();
+            characterSetIdAndNameList.Add(bufIDAndName);
+
+            // IDと名前も同時に記録しておく
+            // 1個目 コンストラクタ
+            bufCharaSet = new Character1Set(1, controller, characterInitializer);
             characterSetList.Add(bufCharaSet);
             // 2個目 IDと名前
             bufIDAndName.id = bufCharaSet.getId();
@@ -94,6 +108,22 @@ namespace DesktopMascot
             bufIDAndName.id = bufMainScrMgr.getId();
             bufIDAndName.name = bufMainScrMgr.getName();
             mainScreenMgrIdAndNameList.Add(bufIDAndName);
+
+
+            // MainScreenMgrとSubScreenMgrが利用するデフォルトキャラクターを設定する
+            // 使用されるスクリーン全てにキャラクターが設定されるようにする
+
+            // MainScreenMgrのデフォルトキャラクター設定
+            foreach (MainScreenMgr item in mainScreenMgrList)
+            {
+                item.setCharacterSet(characterSetList[1]);
+            }
+
+            // SubScreenMgrのデフォルトキャラクター設定
+            foreach (SubScreenMgr item in subScreenMgrList)
+            {
+                item.setCharacterSet(characterSetList[1]);
+            }
         }
 
     }

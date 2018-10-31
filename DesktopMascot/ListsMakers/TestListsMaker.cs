@@ -36,6 +36,8 @@ namespace DesktopMascot
             subScreenMgrList.Add(bufSubScrMgr);
             bufSubScrMgr = new WeatherScreen(2);
             subScreenMgrList.Add(bufSubScrMgr);
+            bufSubScrMgr = new Newsviewer(3);
+            subScreenMgrList.Add(bufSubScrMgr);
             bufSubScrMgr = new TwitterViewer(4);
             subScreenMgrList.Add(bufSubScrMgr);
 

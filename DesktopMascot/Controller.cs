@@ -20,16 +20,61 @@ namespace DesktopMascot
         private List<IDAndName> characterSetIdAndNameList;
         private ListsMaker listsMaker;
         private CharacterInitializer characterInitializer;
+        private int defaultCharacterIndex;
+        private MainScreenMgr runningMainScr;
 
         // メソッド
         public List<IDAndName> getCharacterSetIdAndNameList() { return this.characterSetIdAndNameList;  }
         public List<IDAndName> getMainScreenMgrIdAndNameList() { return this.mainScreenMgrIdAndNameList; }
-        public void chengeCharacter(int characterId) { ; }
-        public void startMainScreen(int mainScreenId) { ; }
-        public void endMainScreen() { ; }
-        
+        public void changeCharacter(int characterId)
+        {
+            foreach(CharacterSet charaItem in characterSetList)
+            {
+                if(charaItem.getId() == characterId)
+                {
+                    foreach(MainScreenMgr mainScrItem in mainScreenMgrList)
+                    {
+                        mainScrItem.setCharacterSet(charaItem);
+                    }
+                    foreach (SubScreenMgr subScrItem in subScreenMgrList)
+                    {
+                        subScrItem.setCharacterSet(charaItem);
+                    }
+                    break;
+                }
+            }
+            return;
+        }
+        public void startMainScreen(int mainScreenId)
+        {
+            foreach(MainScreenMgr item in mainScreenMgrList)
+            {
+                if(item.getId() == mainScreenId)
+                {
+                    runningMainScr = item;
+                    break;
+                }
+            }
+
+            runningMainScr.start();
+            return;
+        }
+        public void endMainScreen()
+        {
+            if(runningMainScr == null)
+            {
+                return;
+            }
+
+            runningMainScr.stop();
+            runningMainScr = null;
+
+            return;
+        }
         public Controller()
         {
+            defaultCharacterIndex = 0;
+            runningMainScr = null;
             // キャラクター初期化に使うInitializerを生成
             characterInitializer = new CharacterInitializer(new MouseEventHandler(pictureBox1_MouseDown), new MouseEventHandler(pictureBox1_MouseUp), new MouseEventHandler(pictureBox1_MouseMove), new EventHandler(pictureBox1_MouseCaptureChanged));
             // 必要なもの生成器を生成する
@@ -42,15 +87,23 @@ namespace DesktopMascot
             mainScreenMgrIdAndNameList = listsMaker.getMainScreenMgrIDAndNameList();
             characterSetIdAndNameList = listsMaker.getCharacterSetIDAndNameList();
 
+            changeCharacter(defaultCharacterIndex);
+
             InitializeComponent();
         }
 
         private void Controller_Load(object sender, EventArgs e)
         {
             // 最初に表示するMainScreenをStartする
-            mainScreenMgrList[1].start();
+            runningMainScr = mainScreenMgrList[1];
+            runningMainScr.start();
             // 最初に表示するキャラクターをスタートする
-            characterSetList[0].start();
+            characterSetList[defaultCharacterIndex].start();
+        }
+
+        public void endApplication()
+        {
+            this.Close();
         }
 
         //↓↓↓↓マウスによるウィンドウ移動操作Start↓↓↓↓

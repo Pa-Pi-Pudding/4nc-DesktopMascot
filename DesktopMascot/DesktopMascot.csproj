@@ -65,6 +65,12 @@
   <ItemGroup>
     <Compile Include="CharacterSets\CharacterInitializer.cs" />
     <Compile Include="CharacterSets\CharacterSet.cs" />
+    <Compile Include="Commands\CharacterChangeCommand.cs" />
+    <Compile Include="Commands\CloseMScrCommand.cs" />
+    <Compile Include="Commands\Command.cs" />
+    <Compile Include="Commands\ExitCommand.cs" />
+    <Compile Include="Commands\HelpCommand.cs" />
+    <Compile Include="Commands\OpenMScrCommand.cs" />
     <Compile Include="MainScreens\ConsoleScreen.cs" />
     <Compile Include="MainScreens\ConsoleScreenForm.cs">
       <SubType>Form</SubType>
@@ -86,19 +92,6 @@
       <DependentUpon>TestCharacter1Form.cs</DependentUpon>
     </Compile>
     <Compile Include="ListsMakers\TestListsMaker.cs" />
-    <Compile Include="SubScreens\Newsviewer\Newsview.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SubScreens\Newsviewer\Newsview.Designer.cs">
-      <DependentUpon>Newsview.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SubScreens\Newsviewer\NewsViewer.cs" />
-    <Compile Include="SubScreens\Newsviewer\NewsViewerForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SubScreens\Newsviewer\NewsViewerForm.Designer.cs">
-      <DependentUpon>NewsViewerForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="SubScreens\TestSubScreenForm2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,12 +151,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainScreens\TestMainScreenForm1.resx">
       <DependentUpon>TestMainScreenForm1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SubScreens\Newsviewer\Newsview.resx">
-      <DependentUpon>Newsview.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SubScreens\Newsviewer\NewsViewerForm.resx">
-      <DependentUpon>NewsViewerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubScreens\TestSubScreenForm1.resx">
       <DependentUpon>TestSubScreenForm1.cs</DependentUpon>

@@ -39,6 +39,8 @@ namespace DesktopMascot
         virtual public Reaction getFuncStartReaction(String funcName) { return getNullReaction(); }
         virtual public Reaction getCommunicationReaction(String message) { return getNullReaction(); }
         virtual public Reaction getFuncAllDisplayReaction() { return getNullReaction(); }
+        virtual public Reaction getChangeMainScreenReaction(String screenName) { return getNullReaction(); }
+        virtual public Reaction getErrorReaction() { return getNullReaction(); }
 
         // 何の反応もしない関数 内部でだけ使用
         private Reaction getNullReaction()

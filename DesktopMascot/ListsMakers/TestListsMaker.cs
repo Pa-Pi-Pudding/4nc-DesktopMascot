@@ -34,9 +34,7 @@ namespace DesktopMascot
             subScreenMgrList.Add(bufSubScrMgr);
             bufSubScrMgr = new TestSubScreen2(1);
             subScreenMgrList.Add(bufSubScrMgr);
-            bufSubScrMgr = new NewsViewer(2);
-            subScreenMgrList.Add(bufSubScrMgr);
-            bufSubScrMgr = new WeatherScreen(3);
+            bufSubScrMgr = new WeatherScreen(2);
             subScreenMgrList.Add(bufSubScrMgr);
             bufSubScrMgr = new TwitterViewer(4);
             subScreenMgrList.Add(bufSubScrMgr);
@@ -47,6 +45,10 @@ namespace DesktopMascot
             bufCommand = new ExitCommand(1, "exit", controller);
             commandList.Add(bufCommand);
             bufCommand = new CharacterChangeCommand(2, "characterchange", characterSetList, controller);
+            commandList.Add(bufCommand);
+            bufCommand = new OpenMScrCommand(3, "openmainscreen", mainScreenMgrList, controller);
+            commandList.Add(bufCommand);
+            bufCommand = new CloseMScrCommand(4, "closemainscreen", controller);
             commandList.Add(bufCommand);
 
             characterInitializer.setCommandList(commandList);

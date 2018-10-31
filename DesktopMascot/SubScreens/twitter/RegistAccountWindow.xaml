@@ -10,7 +10,7 @@
         <Label Content="Access here:" />
         <TextBox x:Name="pinURITextBox" HorizontalScrollBarVisibility="Auto" IsReadOnly="True" Text="processing..."/>
         <Label Content="PIN:"/>
-        <TextBox x:Name="pinTextBox" />
+        <TextBox x:Name="pinTextBox" TextChanged="pinTextBox_TextChanged" />
         <Button x:Name="okButton" Content="OK" IsDefault="True" Click="okButton_Click"/>
         <Button x:Name="cancelButton" Content="Cancel" IsCancel="True" Click="cancelButton_Click"/>
     </StackPanel>

@@ -92,7 +92,7 @@
       <DependentUpon>TestCharacter1Form.cs</DependentUpon>
     </Compile>
     <Compile Include="ListsMakers\TestListsMaker.cs" />
-    <Compile Include="SubScreens\Newsviewer.cs" />
+    <Compile Include="SubScreens\Newsviewer\Newsviewer.cs" />
     <Compile Include="SubScreens\Newsviewer\Newsview.cs">
       <SubType>Form</SubType>
     </Compile>

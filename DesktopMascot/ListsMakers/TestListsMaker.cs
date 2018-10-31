@@ -36,7 +36,7 @@ namespace DesktopMascot
             subScreenMgrList.Add(bufSubScrMgr);
             bufSubScrMgr = new WeatherScreen(2);
             subScreenMgrList.Add(bufSubScrMgr);
-            bufSubScrMgr = new Newsviewer(3);
+            bufSubScrMgr = new TwitterViewer(4);
             subScreenMgrList.Add(bufSubScrMgr);
 
             // 全てのCommandを生成し、Listに入れる

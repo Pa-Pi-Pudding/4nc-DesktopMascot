@@ -54,6 +54,28 @@ namespace DesktopMascot
             }
             return;
         }
+        public void startCharacter(int characterId)
+        {
+            foreach (CharacterSet charaItem in characterSetList)
+            {
+                if (charaItem.getId() == characterId)
+                {
+                    foreach (MainScreenMgr mainScrItem in mainScreenMgrList)
+                    {
+                        mainScrItem.setCharacterSet(charaItem);
+                    }
+                    foreach (SubScreenMgr subScrItem in subScreenMgrList)
+                    {
+                        subScrItem.setCharacterSet(charaItem);
+                    }
+                    runningCharacterSet = charaItem;
+                    runningCharacterSet.start();
+                    break;
+                }
+            }
+
+            return;
+        }
         public void startMainScreen(int mainScreenId)
         {
             foreach(MainScreenMgr item in mainScreenMgrList)
@@ -106,11 +128,9 @@ namespace DesktopMascot
         private void Controller_Load(object sender, EventArgs e)
         {
             // 最初に表示するMainScreenをStartする
-            runningMainScr = mainScreenMgrList[defaultMainScrIndex];
-            runningMainScr.start();
+            startMainScreen(defaultMainScrIndex);
             // 最初に表示するキャラクターをスタートする
-            runningCharacterSet = characterSetList[defaultCharacterIndex];
-            runningCharacterSet.start();
+            startCharacter(defaultCharacterIndex);
         }
 
         public void endApplication()

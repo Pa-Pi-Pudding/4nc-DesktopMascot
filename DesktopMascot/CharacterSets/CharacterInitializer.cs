@@ -70,32 +70,6 @@ namespace DesktopMascot
                 targetContextMenuStrip.Items.Add(bufTsi);
             }
 
-            //// 第1階層のメニュー
-            //ToolStripMenuItem tsi1 = new ToolStripMenuItem();
-            //tsi1.Text = "グループ";
-            //tsi1.ToolTipText = "グループのツールチップ";
-
-            //// 第2階層のメニュー
-            //ToolStripMenuItem tsi2 = new ToolStripMenuItem();
-            //tsi2.Text = "メニュー項目1";
-            //tsi2.ToolTipText = "メニュー項目1のツールチップ";
-            //// クリックイベントを追加する
-            //// フォームで設定した ItemClicked イベントは第1階層の項目のみ発生する
-            //tsi2.Click += contextMenuStrip_SubMenuClick;
-
-            //// 第1階層のメニューの最後尾に追加
-            //tsi1.DropDownItems.Add(tsi2);
-
-            //ToolStripMenuItem tsi3 = new ToolStripMenuItem();
-            //tsi3.Text = "メニュー項目2";
-            //tsi3.ToolTipText = "メニュー項目2のツールチップ";
-            //tsi3.Click += contextMenuStrip_SubMenuClick;
-
-            //// 第1階層のメニューの最後尾に追加する
-            //tsi1.DropDownItems.Add(tsi3);
-
-            //// コンテキストメニューに第1階層のメニューを追加する
-            //targetContextMenuStrip.Items.Add(tsi1);
         }
     }
 }

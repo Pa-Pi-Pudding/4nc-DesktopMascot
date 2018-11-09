@@ -102,12 +102,12 @@ namespace DesktopMascot
 
             //独り言ウィンドウ
             // 3個目 コンストラクタ
-            //bufMainScrMgr = new HitorigotoScreen(2, subScreenMgrList, controller, commandList);
-            //mainScreenMgrList.Add(bufMainScrMgr);
-            //3個目 IDと名前
-            //bufIDAndName.id = bufMainScrMgr.getId();
-            //bufIDAndName.name = bufMainScrMgr.getName();
-            //mainScreenMgrIdAndNameList.Add(bufIDAndName);
+            bufMainScrMgr = new HitorigotoScreen(2, subScreenMgrList, controller, commandList);
+            mainScreenMgrList.Add(bufMainScrMgr);
+            // 3個目 IDと名前
+            bufIDAndName.id = bufMainScrMgr.getId();
+            bufIDAndName.name = bufMainScrMgr.getName();
+            mainScreenMgrIdAndNameList.Add(bufIDAndName);
 
 
             // MainScreenMgrとSubScreenMgrが利用するデフォルトキャラクターを設定する

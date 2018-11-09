@@ -35,7 +35,7 @@ namespace DesktopMascot
         {
             ToolStripMenuItem bufTsi = new ToolStripMenuItem();
 
-            bufTsi.Text = this.executeName;
+            bufTsi.Text = "終了";
             bufTsi.ToolTipText = this.description;
             bufTsi.Click += this.contextMenuEvent;
 

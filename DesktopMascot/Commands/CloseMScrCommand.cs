@@ -43,7 +43,7 @@ namespace DesktopMascot
         {
             ToolStripMenuItem bufTsi = new ToolStripMenuItem();
 
-            bufTsi.Text = this.executeName;
+            bufTsi.Text = "スクリーンを閉じる";
             bufTsi.ToolTipText = this.description;
             bufTsi.Click += this.contextMenuEvent;
 

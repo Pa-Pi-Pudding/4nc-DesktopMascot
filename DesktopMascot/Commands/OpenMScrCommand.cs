@@ -61,7 +61,7 @@ namespace DesktopMascot
         {
             ToolStripMenuItem bufTsi = new ToolStripMenuItem();
 
-            bufTsi.Text = this.executeName;
+            bufTsi.Text = "スクリーンの変更";
             bufTsi.ToolTipText = this.description;
 
             foreach (MainScreenMgr item in mainScreenMgrList)

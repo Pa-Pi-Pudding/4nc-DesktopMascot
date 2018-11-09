@@ -135,6 +135,7 @@
   </data>
   <data name="TestCharacter1_hello" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TestCharacter1_hello.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="TestCharacter1_angry" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TestCharacter1_angry.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -143,6 +144,7 @@
   </data>
   <data name="Terminal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Terminal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="TestCharacter1_surprised" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TestCharacter1_surprised.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -151,16 +153,19 @@
   </data>
   <data name="character1_toji" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\character1_toji1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="TestCharacter1_default" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TestCharacter1_default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="character1_hanme" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\character1_hanme1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Terminal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Terminal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="HitorigotoWindow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HitorigotoWindow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="character1_smile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\character1_smile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

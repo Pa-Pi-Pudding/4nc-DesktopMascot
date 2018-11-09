@@ -73,7 +73,7 @@ namespace DesktopMascot
         }
         public Controller()
         {
-            defaultCharacterIndex = 0;
+            defaultCharacterIndex = 1;
             runningMainScr = null;
             // キャラクター初期化に使うInitializerを生成
             characterInitializer = new CharacterInitializer(new MouseEventHandler(pictureBox1_MouseDown), new MouseEventHandler(pictureBox1_MouseUp), new MouseEventHandler(pictureBox1_MouseMove), new EventHandler(pictureBox1_MouseCaptureChanged));

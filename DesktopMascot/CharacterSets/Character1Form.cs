@@ -34,8 +34,11 @@ namespace DesktopMascot
             // 最後に呼び出すこと（正確にはInitializeComponentの後に呼び出す）
             // これを呼び出さないと掴んで移動が出来ない
             characterInitializer.initCharaPictureBox(pictureBox2);
-            
-            
+
+            // 右クリックでコンテキストメニューを表示できるようになる
+            characterInitializer.addContextMenu(this.contextMenuStrip1);
+
+
         }
 
         private void Character1Form_Load(object sender, EventArgs e)
@@ -142,7 +145,14 @@ namespace DesktopMascot
 
         }//blink_timer_Tick　END
 
+        // pictureBox2_DoubleClickに変更したので、今は使われていない。
         private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.pictureBox2.Image = @pic4;
+            //setWhatAnimation();
+        }
+
+        private void pictureBox2_DoubleClick(object sender, EventArgs e)
         {
             this.pictureBox2.Image = @pic4;
             //setWhatAnimation();

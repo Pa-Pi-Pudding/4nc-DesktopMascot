@@ -14,7 +14,7 @@ namespace DesktopMascot
             // コンストラクタでスクリーンの名前を設定する
             screenName = "twitter";
             // コンストラクタでスクリーンの機能について軽い説明を入れる。
-            screenDescription = "Mikutterはlinuxじゃないとできません";
+            screenDescription = "Mikutterはlinuxじゃないとできません。";
         }
 
         public override void start()

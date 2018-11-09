@@ -17,7 +17,7 @@ namespace DesktopMascot
             // コンストラクタでスクリーンの名前を設定する
             screenName = "OpenAccess";
             // コンストラクタでスクリーンの機能について軽い説明を入れる。
-            screenDescription = "openコマンドによるアクセス先の登録";
+            screenDescription = "openコマンドによるアクセス先の登録をします。";
         }
 
         public override void start()

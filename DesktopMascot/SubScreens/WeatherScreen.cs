@@ -17,7 +17,7 @@ namespace DesktopMascot
             // コンストラクタでスクリーンの名前を設定する
             screenName = "WeatherScreen";
             // コンストラクタでスクリーンの機能について軽い説明を入れる。
-            screenDescription = "各地の天気予報を取得";
+            screenDescription = "天気予報を取得します。";
         }
 
         public override void start()

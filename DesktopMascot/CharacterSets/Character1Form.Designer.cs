@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.blink_timer = new System.Windows.Forms.Timer(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,6 +44,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox2.ContextMenuStrip = this.contextMenuStrip1;
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = global::DesktopMascot.Properties.Resources.character1;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
@@ -51,7 +53,12 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.DoubleClick += new System.EventHandler(this.pictureBox2_DoubleClick);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // Character1Form
             // 
@@ -69,5 +76,6 @@
 
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Timer blink_timer;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

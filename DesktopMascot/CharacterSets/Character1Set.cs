@@ -115,7 +115,10 @@ namespace DesktopMascot
                     bufReact.message = "大丈夫ですか？お気を確かに！";
                     //bufForm.setSurprisedAnimation();
                     break;
-                    
+                default:
+                    bufReact.message = "すみません...メッセージの意図が分かりません(汗";
+                    break;
+
             }
 
 
@@ -128,8 +131,9 @@ namespace DesktopMascot
         public override Reaction getFuncAllDisplayReaction()
         {
             Reaction bufReact = new Reaction();
-            bufReact.message = "機能は以上です！";
-            bufReact.subMessage = "機能を一覧表示します！";
+            bufReact.message = "以上になります。";
+            bufReact.subMessage = "機能一覧を表示しますね。\r\n";
+            bufReact.subMessage += "あああ\r\n";
             //bufForm.setHelloAnimation();
             return bufReact;
         }

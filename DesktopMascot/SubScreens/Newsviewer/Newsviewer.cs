@@ -17,7 +17,7 @@ namespace DesktopMascot
             // コンストラクタでスクリーンの名前を設定する
             screenName = "Newsviewer";
             // コンストラクタでスクリーンの機能について軽い説明を入れる。
-            screenDescription = "ニュースをみます";
+            screenDescription = "ニュースを取得します。";
         }
 
         public override void start()

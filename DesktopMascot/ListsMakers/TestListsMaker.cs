@@ -109,21 +109,6 @@ namespace DesktopMascot
             bufIDAndName.name = bufMainScrMgr.getName();
             mainScreenMgrIdAndNameList.Add(bufIDAndName);
 
-
-            // MainScreenMgrとSubScreenMgrが利用するデフォルトキャラクターを設定する
-            // 使用されるスクリーン全てにキャラクターが設定されるようにする
-
-            // MainScreenMgrのデフォルトキャラクター設定
-            foreach (MainScreenMgr item in mainScreenMgrList)
-            {
-                item.setCharacterSet(characterSetList[1]);
-            }
-
-            // SubScreenMgrのデフォルトキャラクター設定
-            foreach (SubScreenMgr item in subScreenMgrList)
-            {
-                item.setCharacterSet(characterSetList[1]);
-            }
         }
 
     }

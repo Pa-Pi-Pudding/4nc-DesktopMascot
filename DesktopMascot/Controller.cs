@@ -83,6 +83,7 @@ namespace DesktopMascot
         public Controller()
         {
             defaultCharacterIndex = 1;
+            defaultMainScrIndex = 1;
             runningMainScr = null;
             runningCharacterSet = null;
             // キャラクター初期化に使うInitializerを生成
@@ -105,7 +106,7 @@ namespace DesktopMascot
         private void Controller_Load(object sender, EventArgs e)
         {
             // 最初に表示するMainScreenをStartする
-            runningMainScr = mainScreenMgrList[1];
+            runningMainScr = mainScreenMgrList[defaultMainScrIndex];
             runningMainScr.start();
             // 最初に表示するキャラクターをスタートする
             runningCharacterSet = characterSetList[defaultCharacterIndex];

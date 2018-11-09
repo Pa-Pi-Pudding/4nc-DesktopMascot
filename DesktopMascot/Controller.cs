@@ -20,18 +20,25 @@ namespace DesktopMascot
         private List<IDAndName> characterSetIdAndNameList;
         private ListsMaker listsMaker;
         private CharacterInitializer characterInitializer;
+        private int defaultMainScrIndex;
         private int defaultCharacterIndex;
         private MainScreenMgr runningMainScr;
+        private CharacterSet runningCharacterSet;
 
         // メソッド
         public List<IDAndName> getCharacterSetIdAndNameList() { return this.characterSetIdAndNameList;  }
         public List<IDAndName> getMainScreenMgrIdAndNameList() { return this.mainScreenMgrIdAndNameList; }
         public void changeCharacter(int characterId)
         {
+            if(runningCharacterSet == null)
+            {
+                return;
+            }
             foreach(CharacterSet charaItem in characterSetList)
             {
                 if(charaItem.getId() == characterId)
                 {
+                    runningCharacterSet.stop();
                     foreach(MainScreenMgr mainScrItem in mainScreenMgrList)
                     {
                         mainScrItem.setCharacterSet(charaItem);
@@ -40,6 +47,8 @@ namespace DesktopMascot
                     {
                         subScrItem.setCharacterSet(charaItem);
                     }
+                    runningCharacterSet = charaItem;
+                    runningCharacterSet.start();
                     break;
                 }
             }
@@ -75,6 +84,7 @@ namespace DesktopMascot
         {
             defaultCharacterIndex = 1;
             runningMainScr = null;
+            runningCharacterSet = null;
             // キャラクター初期化に使うInitializerを生成
             characterInitializer = new CharacterInitializer(new MouseEventHandler(pictureBox1_MouseDown), new MouseEventHandler(pictureBox1_MouseUp), new MouseEventHandler(pictureBox1_MouseMove), new EventHandler(pictureBox1_MouseCaptureChanged));
             // 必要なもの生成器を生成する
@@ -98,7 +108,8 @@ namespace DesktopMascot
             runningMainScr = mainScreenMgrList[1];
             runningMainScr.start();
             // 最初に表示するキャラクターをスタートする
-            characterSetList[defaultCharacterIndex].start();
+            runningCharacterSet = characterSetList[defaultCharacterIndex];
+            runningCharacterSet.start();
         }
 
         public void endApplication()

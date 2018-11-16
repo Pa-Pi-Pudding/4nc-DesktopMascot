@@ -87,6 +87,7 @@
     <Compile Include="Commands\HelpCommand.cs" />
     <Compile Include="Commands\OpenCommand.cs" />
     <Compile Include="Commands\OpenMScrCommand.cs" />
+    <Compile Include="ListsMakers\ProductListsMaker.cs" />
     <Compile Include="MainScreens\HitorigotoScreen.cs" />
     <Compile Include="MainScreens\HitorigotoScreenForm.cs">
       <SubType>Form</SubType>

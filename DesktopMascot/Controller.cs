@@ -105,13 +105,13 @@ namespace DesktopMascot
         public Controller()
         {
             defaultCharacterIndex = 1;
-            defaultMainScrIndex = 1;
+            defaultMainScrIndex = 0;
             runningMainScr = null;
             runningCharacterSet = null;
             // キャラクター初期化に使うInitializerを生成
             characterInitializer = new CharacterInitializer(new MouseEventHandler(pictureBox1_MouseDown), new MouseEventHandler(pictureBox1_MouseUp), new MouseEventHandler(pictureBox1_MouseMove), new EventHandler(pictureBox1_MouseCaptureChanged));
             // 必要なもの生成器を生成する
-            listsMaker = new TestListsMaker(this, characterInitializer);
+            listsMaker = new ProductListsMaker(this, characterInitializer);
 
             // メンバ変数の初期化
             mainScreenMgrList = listsMaker.getMainScreenMgrList();

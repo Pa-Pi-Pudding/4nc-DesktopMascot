@@ -13,7 +13,7 @@ namespace DesktopMascot
     public partial class ConsoleScreenForm : Form
     {
         private String newLineCode = "\n\r";
-        private String userName = "testName";
+        private String userName = "User";
         private CharacterSet characterSet;
         private List<SubScreenMgr> subScreenMgrList;
         private List<Command> commandList;

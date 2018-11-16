@@ -46,15 +46,15 @@ namespace DesktopMascot
             // 全てのCommandを生成し、Listに入れる
             bufCommand = new HelpCommand(0, "help", subScreenMgrList);
             commandList.Add(bufCommand);
-            bufCommand = new ExitCommand(1, "exit", controller);
+            bufCommand = new CharacterChangeCommand(1, "characterchange", characterSetList, controller);
             commandList.Add(bufCommand);
-            bufCommand = new CharacterChangeCommand(2, "characterchange", characterSetList, controller);
+            bufCommand = new OpenMScrCommand(2, "openmainscreen", mainScreenMgrList, controller);
             commandList.Add(bufCommand);
-            bufCommand = new OpenMScrCommand(3, "openmainscreen", mainScreenMgrList, controller);
+            bufCommand = new CloseMScrCommand(3, "closemainscreen", controller);
             commandList.Add(bufCommand);
-            bufCommand = new CloseMScrCommand(4, "closemainscreen", controller);
+            bufCommand = new OpenCommand(4, "open");
             commandList.Add(bufCommand);
-            bufCommand = new OpenCommand(5, "open");
+            bufCommand = new ExitCommand(5, "exit", controller);
             commandList.Add(bufCommand);
 
 

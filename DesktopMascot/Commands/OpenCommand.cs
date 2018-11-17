@@ -91,7 +91,7 @@ namespace DesktopMascot
                     }
                     */
                     System.Diagnostics.Process.Start(ht[args[1]].ToString());
-
+                    mainReact.message = "\"" + args[1] + "\"にアクセスします。";
 
                 }
                 else

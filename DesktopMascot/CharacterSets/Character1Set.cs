@@ -16,9 +16,9 @@ namespace DesktopMascot
         public Character1Set(int id, Controller controller, CharacterInitializer characterInitializer) : base(id, controller, characterInitializer)
         {
             // 必須
-            characterName = "Character1";
+            characterName = "アイラ";
 
-            // テスト用　コピペしないで
+            // テスト用 コピペしないで
             //counter = 0;
             //rnd = new Random();
         }
@@ -85,7 +85,6 @@ namespace DesktopMascot
 
         public override Reaction getFuncStartReaction(String funcName)
         {
-
             Reaction bufReact = new Reaction();
             bufReact.message = funcName + "を起動します！";
             //bufForm.setHelloAnimation();
@@ -100,23 +99,24 @@ namespace DesktopMascot
             switch (message)
             {
                 case "こんにちは":
-                    bufReact.message = "こんにちは！";
+                    bufReact.message = "こんにちは。調子はいかがですか？";
                     //bufForm.setHelloAnimation();
                     break;
                 case "お前誰だよ":
-                    bufReact.message = "失礼ですね！？私はテスト君です！！";
+                    bufReact.message = "申し遅れました。私はアイラと申します。";
                     //bufForm.setAngryAnimation();
                     break;
                 case "hoge":
-                    bufReact.message = "適当にhogeを入れているんですね！わかりますよ！";
+                    bufReact.message = "あ、知ってます。プログラマーの方がよく使われる言葉ですよね。";
                     //bufForm.setHelloAnimation();
                     break;
                 case "くぁｗせｄｒｆｔｇｙふじこｌｐ；":
-                    bufReact.message = "大丈夫ですか？お気を確かに！";
+                    bufReact.message = "お、落ち着いてください。まずは深呼吸をしましょう。";
+                    //bufReact.message = "大丈夫ですか？お気を確かに！";
                     //bufForm.setSurprisedAnimation();
                     break;
                 default:
-                    bufReact.message = "すみません...メッセージの意図が分かりません(汗";
+                    bufReact.message = "すみません、メッセージの意図が分かりません...";
                     break;
 
             }
@@ -133,7 +133,6 @@ namespace DesktopMascot
             Reaction bufReact = new Reaction();
             bufReact.message = "以上になります。";
             bufReact.subMessage = "機能一覧を表示しますね。\r\n";
-            bufReact.subMessage += "あああ\r\n";
             //bufForm.setHelloAnimation();
             return bufReact;
         }

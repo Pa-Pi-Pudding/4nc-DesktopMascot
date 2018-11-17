@@ -15,6 +15,7 @@ namespace DesktopMascot
         public OpenCommand(int id, String executeName): base(id, executeName)
         {
             this.description = "コマンドに従ってアクセスします。";
+
         }
 
         public override Reaction execute(String[] args, CharacterSet characterSet)
@@ -22,12 +23,14 @@ namespace DesktopMascot
             //MessageBox.Show(args[1]);//[0]は"open"。[1]がアクセスコマンド部分
 
             Reaction mainReact = new Reaction();//キャラクタの返答メッセージを格納する変数
+            mainReact.message = "";
 
 
 
-            if (args[1] == "")
+            if (args.Length == 1 ||args[1] == "")
             {
-                MessageBox.Show("検索したい起動コマンドを入力して下さい。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("検索したい起動コマンドを入力して下さい。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                mainReact.message = "検索したい起動コマンドを入力して下さい。";
             }
             else
             {
@@ -89,11 +92,13 @@ namespace DesktopMascot
                     */
                     System.Diagnostics.Process.Start(ht[args[1]].ToString());
 
+
                 }
                 else
                 {
                     //存在しない時
-                    MessageBox.Show("\"" + args[1] + "\"は登録されていません。");
+                    //MessageBox.Show("\"" + args[1] + "\"は登録されていません。");
+                    mainReact.message = "\"" + args[1] + "\"は登録されていません。";
                 }
 
                 

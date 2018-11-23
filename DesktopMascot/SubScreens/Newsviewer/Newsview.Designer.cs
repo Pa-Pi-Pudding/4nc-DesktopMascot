@@ -43,11 +43,11 @@ namespace DesktopMascot
             this.richTextBox1.Location = new System.Drawing.Point(0, 0);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.DetectUrls = true;
             this.richTextBox1.Size = new System.Drawing.Size(502, 107);
-            this.richTextBox1.LinkClicked += new LinkClickedEventHandler(richTextBox_LinkClicked);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
+            this.richTextBox1.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.richTextBox_LinkClicked);
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // richTextBox2
             // 
@@ -56,9 +56,9 @@ namespace DesktopMascot
             this.richTextBox2.ReadOnly = true;
             this.richTextBox2.Size = new System.Drawing.Size(502, 107);
             this.richTextBox2.TabIndex = 1;
-            this.richTextBox2.LinkClicked += new LinkClickedEventHandler(richTextBox_LinkClicked);
             this.richTextBox2.TabStop = false;
             this.richTextBox2.Text = "";
+            this.richTextBox2.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.richTextBox_LinkClicked);
             // 
             // richTextBox3
             // 
@@ -66,9 +66,9 @@ namespace DesktopMascot
             this.richTextBox3.Name = "richTextBox3";
             this.richTextBox3.ReadOnly = true;
             this.richTextBox3.Size = new System.Drawing.Size(502, 107);
-            this.richTextBox3.LinkClicked += new LinkClickedEventHandler(richTextBox_LinkClicked);
             this.richTextBox3.TabIndex = 2;
             this.richTextBox3.Text = "";
+            this.richTextBox3.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.richTextBox_LinkClicked);
             // 
             // richTextBox4
             // 
@@ -76,19 +76,9 @@ namespace DesktopMascot
             this.richTextBox4.Name = "richTextBox4";
             this.richTextBox4.ReadOnly = true;
             this.richTextBox4.Size = new System.Drawing.Size(502, 107);
-            this.richTextBox4.LinkClicked += new LinkClickedEventHandler(richTextBox_LinkClicked);
             this.richTextBox4.TabIndex = 3;
             this.richTextBox4.Text = "";
-            // 
-            // richTextBox5
-            // 
-            this.richTextBox5.Location = new System.Drawing.Point(0, 532);
-            this.richTextBox5.Name = "richTextBox5";
-            this.richTextBox5.ReadOnly = true;
-            this.richTextBox5.Size = new System.Drawing.Size(502, 107);
-            this.richTextBox5.LinkClicked += new LinkClickedEventHandler(richTextBox_LinkClicked);
-            this.richTextBox5.TabIndex = 6;
-            this.richTextBox5.Text = "";
+            this.richTextBox4.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.richTextBox_LinkClicked);
             // 
             // richTextBox6
             // 
@@ -96,10 +86,19 @@ namespace DesktopMascot
             this.richTextBox6.Name = "richTextBox6";
             this.richTextBox6.ReadOnly = true;
             this.richTextBox6.Size = new System.Drawing.Size(502, 107);
-            this.richTextBox6.LinkClicked += new LinkClickedEventHandler(richTextBox_LinkClicked);
             this.richTextBox6.TabIndex = 4;
             this.richTextBox6.Text = "";
-
+            this.richTextBox6.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.richTextBox_LinkClicked);
+            // 
+            // richTextBox5
+            // 
+            this.richTextBox5.Location = new System.Drawing.Point(0, 532);
+            this.richTextBox5.Name = "richTextBox5";
+            this.richTextBox5.ReadOnly = true;
+            this.richTextBox5.Size = new System.Drawing.Size(502, 107);
+            this.richTextBox5.TabIndex = 6;
+            this.richTextBox5.Text = "";
+            this.richTextBox5.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.richTextBox_LinkClicked);
             // 
             // Newsview
             // 

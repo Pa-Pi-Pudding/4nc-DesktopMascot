@@ -176,5 +176,87 @@ namespace DesktopMascot
             viewer.Show();
         }
 
+        // 経済
+        private void zaikei_Click(object sender, EventArgs e)
+        {
+            string sendRssUrl = @"http://www.zaikei.co.jp/rss/sections/economy.xml";
+            int MethodFlag = 1;
+            Newsview viewer = new Newsview(sendRssUrl,MethodFlag);
+            viewer.Show();
+        }
+        private void otakuma_Click(object sender, EventArgs e)
+        {
+            string sendRssUrl = @"http://otakei.otakuma.net/feed";
+            int MethodFlag = 1;
+            Newsview viewer = new Newsview(sendRssUrl,MethodFlag);
+            viewer.Show();
+        }
+
+        private void toyokeizai_Click(object sender, EventArgs e)
+        {
+            string sendRssUrl = @"https://toyokeizai.net/list/feed/rss";
+            int MethodFlag = 1;
+            Newsview viewer = new Newsview(sendRssUrl,MethodFlag);
+            viewer.Show();
+        }
+
+        private void JBpress_Click(object sender, EventArgs e)
+        {
+            string sendRssUrl = @"http://jbpress.ismedia.jp/list/feed/rss";
+            int MethodFlag = 1;
+            Newsview viewer = new Newsview(sendRssUrl,MethodFlag);
+            viewer.Show();
+        }
+
+        private void meti_Click(object sender, EventArgs e)
+        {
+            string sendRssUrl = @"http://www.meti.go.jp/ml_index_release_atom.xml";
+            int MethodFlag = 1;
+            Newsview viewer = new Newsview(sendRssUrl,MethodFlag);
+            viewer.Show();
+        }
+
+        //  芸能
+
+        private void nitisupo_Click(object sender, EventArgs e)
+        {
+            string sendRssUrl = @"https://www.nikkansports.com/entertainment/atom.xml";
+            int MethodFlag = 1;
+            Newsview viewer = new Newsview(sendRssUrl,MethodFlag);
+            viewer.Show();
+        }
+
+        private void zakzak_Click(object sender, EventArgs e)
+        {
+            string sendRssUrl = @"https://www.zakzak.co.jp/rss/news/flash-n.xml";
+            int MethodFlag = 1;
+            Newsview viewer = new Newsview(sendRssUrl,MethodFlag);
+            viewer.Show();           
+
+        }
+
+        private void nifty_Click(object sender, EventArgs e)
+        {
+            string sendRssUrl = @"https://news.nifty.com/rss/topics_entame.xml";
+            int MethodFlag = 1;
+            Newsview viewer = new Newsview(sendRssUrl,MethodFlag);
+            viewer.Show();
+        }
+
+        private void geinoukininaru_Click(object sender, EventArgs e)
+        {
+            string sendRssUrl = @"http://blog.livedoor.jp/uwasainfo/index.rdf";
+            int MethodFlag = 0;
+            Newsview viewer = new Newsview(sendRssUrl,MethodFlag);
+            viewer.Show();
+        }
+
+        private void geinou_scoop_Click(object sender, EventArgs e)
+        {
+            string sendRssUrl = @"http://imashun-navi.com/feed";
+            int MethodFlag = 1;
+            Newsview viewer = new Newsview(sendRssUrl,MethodFlag);
+            viewer.Show();
+        }
     }
 }

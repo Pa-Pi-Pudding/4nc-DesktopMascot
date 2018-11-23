@@ -48,11 +48,23 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.button21 = new System.Windows.Forms.Button();
+            this.button22 = new System.Windows.Forms.Button();
+            this.button23 = new System.Windows.Forms.Button();
+            this.button24 = new System.Windows.Forms.Button();
+            this.button25 = new System.Windows.Forms.Button();
             this.Anime.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -268,23 +280,133 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.button16);
+            this.tabPage4.Controls.Add(this.button17);
+            this.tabPage4.Controls.Add(this.button18);
+            this.tabPage4.Controls.Add(this.button19);
+            this.tabPage4.Controls.Add(this.button20);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(467, 254);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.Text = "経済";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // button16
+            // 
+            this.button16.Location = new System.Drawing.Point(7, 134);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(198, 26);
+            this.button16.TabIndex = 11;
+            this.button16.Text = "otakuma";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.otakuma_Click);
+            // 
+            // button17
+            // 
+            this.button17.Location = new System.Drawing.Point(7, 102);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(198, 26);
+            this.button17.TabIndex = 10;
+            this.button17.Text = "経済産業省";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.meti_Click);
+            // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(7, 70);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(198, 26);
+            this.button18.TabIndex = 9;
+            this.button18.Text = "JBpress";
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.JBpress_Click);
+            // 
+            // button19
+            // 
+            this.button19.Location = new System.Drawing.Point(7, 38);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(198, 26);
+            this.button19.TabIndex = 8;
+            this.button19.Text = "東洋経済";
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.toyokeizai_Click);
+            // 
+            // button20
+            // 
+            this.button20.Location = new System.Drawing.Point(7, 6);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(198, 26);
+            this.button20.TabIndex = 7;
+            this.button20.Text = "財形新聞";
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.zaikei_Click);
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.button21);
+            this.tabPage5.Controls.Add(this.button22);
+            this.tabPage5.Controls.Add(this.button23);
+            this.tabPage5.Controls.Add(this.button24);
+            this.tabPage5.Controls.Add(this.button25);
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage5.Size = new System.Drawing.Size(467, 254);
             this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "tabPage5";
+            this.tabPage5.Text = "芸能";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // button21
+            // 
+            this.button21.Location = new System.Drawing.Point(7, 134);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(198, 26);
+            this.button21.TabIndex = 11;
+            this.button21.Text = "芸能スクープ，今旬ナビ！";
+            this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.geinou_scoop_Click);
+            // 
+            // button22
+            // 
+            this.button22.Location = new System.Drawing.Point(7, 102);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(198, 26);
+            this.button22.TabIndex = 10;
+            this.button22.Text = "芸能人の気になる噂";
+            this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.geinoukininaru_Click);
+            // 
+            // button23
+            // 
+            this.button23.Location = new System.Drawing.Point(7, 70);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(198, 26);
+            this.button23.TabIndex = 9;
+            this.button23.Text = "nifty(芸能)";
+            this.button23.UseVisualStyleBackColor = true;
+            this.button23.Click += new System.EventHandler(this.nifty_Click);
+            // 
+            // button24
+            // 
+            this.button24.Location = new System.Drawing.Point(7, 38);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(198, 26);
+            this.button24.TabIndex = 8;
+            this.button24.Text = "zakzak(夕刊フジ)";
+            this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.zakzak_Click);
+            // 
+            // button25
+            // 
+            this.button25.Location = new System.Drawing.Point(7, 6);
+            this.button25.Name = "button25";
+            this.button25.Size = new System.Drawing.Size(198, 26);
+            this.button25.TabIndex = 7;
+            this.button25.Text = "日刊スポーツ（芸能）";
+            this.button25.UseVisualStyleBackColor = true;
+            this.button25.Click += new System.EventHandler(this.nitisupo_Click);
             // 
             // NewsViewerForm
             // 
@@ -296,6 +418,8 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -323,5 +447,15 @@
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.Button button24;
+        private System.Windows.Forms.Button button25;
     }
 }

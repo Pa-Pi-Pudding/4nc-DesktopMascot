@@ -74,7 +74,8 @@ namespace DesktopMascot.SubScreens.twitter
                 // 表示調整
                 owner.updatescreennameLabel(owner.tokens.ScreenName);
 
-                MessageBox.Show("verified: " + owner.tokens.ScreenName);
+                MessageBox.Show("verified: " + owner.tokens.ScreenName +"\r\n" + "twitter画面をリロードしてね" );
+
             }
             catch (Exception ex)
             {

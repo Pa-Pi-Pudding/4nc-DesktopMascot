@@ -21,5 +21,15 @@ namespace DesktopMascot
         {
 
         }
+
+        private void reloadButton_Click(object sender, EventArgs e)
+        {
+    　　　　// 再起動後のForm2を生成
+    　　　　TwitterViewerForm frm2 = new TwitterViewerForm();
+    　　　　// 自身を閉じる
+    　　　　this.Close();
+    　　　　// 再起動のForm2を起動する
+    　　　　frm2.Show();
+        }
     }
 }

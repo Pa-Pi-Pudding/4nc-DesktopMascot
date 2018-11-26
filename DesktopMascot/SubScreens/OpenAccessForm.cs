@@ -54,7 +54,7 @@ namespace DesktopMascot
 
             //実行ファイルのあるディレクトリを取得
             string CurrentDir = System.IO.Directory.GetCurrentDirectory();
-            String csvfilepath = CurrentDir + @"\openlistfile.csv";
+            string csvfilepath = CurrentDir + @"\openlistfile.csv";
 
             //CSVファイルを読み込む
             System.IO.StreamReader csvread = new System.IO.StreamReader(
@@ -309,6 +309,11 @@ namespace DesktopMascot
                 button2_Click(sender, e);
 
             }
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

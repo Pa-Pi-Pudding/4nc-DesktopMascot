@@ -28,15 +28,22 @@ namespace DesktopMascot.SubScreens.twitter
         {
             InitializeComponent();
 
+
             // トークン組立
-            if (!string.IsNullOrEmpty(Properties.Settings.Default.AccessToken)
-                && !string.IsNullOrEmpty(Properties.Settings.Default.AccessTokenSecret))
+            if (!string.IsNullOrEmpty(ReadAccountcsvdata(1))
+                && !string.IsNullOrEmpty(ReadAccountcsvdata(2)))
             {
+
+                string ApiKey = ReadAccountcsvdata(1);
+                string ApiSecretKey = ReadAccountcsvdata(2);
+                string AccessToken = ReadAccountcsvdata(3);
+                string AccessTokenSecret = ReadAccountcsvdata(4);
+
                 tokens = Tokens.Create(
-                    Properties.Settings.Default.ApiKey
-                    , Properties.Settings.Default.ApiSecret
-                    , Properties.Settings.Default.AccessToken
-                    , Properties.Settings.Default.AccessTokenSecret);
+                    ApiKey
+                    , ApiSecretKey
+                    , AccessToken
+                    , AccessTokenSecret);
                 updatescreennameLabel();
 
                 /*
@@ -46,18 +53,18 @@ namespace DesktopMascot.SubScreens.twitter
                  * 動的にScreenNameを得る場合のテストコード
                  */
                 ///トークン有効性確認
-                try
-                {
-                    var userResponse = tokens.Account.VerifyCredentials();
-                    updatescreennameLabel(userResponse.ScreenName);
-                    Properties.Settings.Default.ScreenName = userResponse.ScreenName;
-                    Properties.Settings.Default.Save();
-                }
-                catch (Exception ex)
-                {
-                    // MessageBox.Show(ex.Message);
-                    tokens = null;
-                }
+                //try
+                //{
+                //    var userResponse = tokens.Account.VerifyCredentials();
+                //    updatescreennameLabel(userResponse.ScreenName);
+                //    Properties.Settings.Default.ScreenName = userResponse.ScreenName;
+                //    Properties.Settings.Default.Save();
+                //}
+                //catch (Exception ex)
+                //{
+                //    // MessageBox.Show(ex.Message);
+                //    tokens = null;
+                //}
             }
         }
         /// <param name="screenName">Twitter Screen Name</param>
@@ -67,7 +74,7 @@ namespace DesktopMascot.SubScreens.twitter
             string _screenName;
             if (string.IsNullOrEmpty(screenName))
             {
-                _screenName = Properties.Settings.Default.ScreenName;
+                _screenName = ReadAccountcsvdata(5);
                 // 未認証時
                 if (string.IsNullOrEmpty(_screenName))
                 {
@@ -118,5 +125,80 @@ namespace DesktopMascot.SubScreens.twitter
             }
         }
 
+
+
+        // OpenAccessForm_Load __ END __
+
+        //空のCSVファイルを作成する。
+        private void CreateNewCSV()
+        {
+            //実行ファイルのあるディレクトリを取得
+            string CurrentDir = System.IO.Directory.GetCurrentDirectory();
+            string csvfilepath = CurrentDir + @"\twitterAccountdata.csv";
+
+            //CSVファイル読み込み
+            System.IO.StreamWriter csvwrite = new System.IO.StreamWriter(
+                csvfilepath, false,
+                System.Text.Encoding.GetEncoding("shift_jis"));
+
+            //CSVに追記
+            csvwrite.WriteLine("");
+            //CSV閉じる
+            csvwrite.Close();
+            //読み込み直す。
+            //CSVRead();
+
+        }//CreateNewCSV() __END_
+        internal string ReadAccountcsvdata(int linenum)
+        {
+            string CurrentDir = System.IO.Directory.GetCurrentDirectory();
+            String csvfilepath = CurrentDir + @"\twitterAccountdata.csv";
+
+            //CSVファイルが有るかどうか調べる
+            if (System.IO.File.Exists(csvfilepath))
+            {
+                //存在する場合CSVファイルを読み込む
+                System.IO.StreamReader csvread = new System.IO.StreamReader(
+                csvfilepath,
+                System.Text.Encoding.GetEncoding("shift_jis"));
+
+                String filedata;
+                //1行ずつ読み込む
+                int count = 0;
+                string returndata = "";
+                while ((filedata = csvread.ReadLine()) != null)
+                {
+                    //カンマまで文字列分割
+                    string[] csvdata = filedata.Split(',');
+                    count++;
+                    //CSVが空(つまりvaluesが空)の場合は、ハッシュテーブルには空値を入れておく
+                    if (csvdata[0] == "")
+                    {
+                        //何もしない。
+                        //ここは、新しくCSVを開いた時に(CSVの中身は空なので)実行される。
+
+                        csvread.Close();
+                    }
+                    else
+                    {
+                        //リストビューに追加
+                        if (count == linenum)
+                        {
+                            returndata = csvdata[1];
+                            csvread.Close();
+                            return returndata; 
+                        }
+                    }
+                }
+               csvread.Close();
+            }
+            else
+            {
+                //存在しない場合
+
+
+            }
+            return "";
+        }
     }
 }

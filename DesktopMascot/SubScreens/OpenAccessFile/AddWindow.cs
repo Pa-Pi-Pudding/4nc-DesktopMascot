@@ -109,12 +109,7 @@ namespace DesktopMascot.SubScreens.OpenAccess
             }
         }
 
-        private void Form2_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void AddWindow_Load(object sender, EventArgs e)
         {
 
         }

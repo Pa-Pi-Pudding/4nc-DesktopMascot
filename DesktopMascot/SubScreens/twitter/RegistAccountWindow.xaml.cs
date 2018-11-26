@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,11 +22,11 @@ namespace DesktopMascot.SubScreens.twitter
     /// </summary>
     public partial class RegistAccountWindow : UserControl
     {
- OAuth.OAuthSession session;
+        OAuth.OAuthSession session;
         public RegistAccountWindow()
         {
             InitializeComponent();
-        initAuthrize();
+            initAuthrize();
         }
 
         // OAuthセッションを作る
@@ -33,7 +34,10 @@ namespace DesktopMascot.SubScreens.twitter
         {
             try
             {
-                session = OAuth.Authorize(Properties.Settings.Default.ApiKey, Properties.Settings.Default.ApiSecret);
+                TwitterMainWindows twitterMainWindows = new TwitterMainWindows();
+                string Apikey = twitterMainWindows.ReadAccountcsvdata(1);
+                string ApiSecretKey = twitterMainWindows.ReadAccountcsvdata(2);
+                session = OAuth.Authorize(Apikey, ApiSecretKey);
                 pinURITextBox.Text = session.AuthorizeUri.ToString();
                 pinTextBox.Clear();
                 // System.Diagnostics.Process.Start(session.AuthorizeUri.ToString());
@@ -67,14 +71,18 @@ namespace DesktopMascot.SubScreens.twitter
                 TwitterMainWindows owner = new TwitterMainWindows();
                 owner.tokens = session.GetTokens(pinTextBox.Text);
                 // トークン保存
-                Properties.Settings.Default.AccessToken = owner.tokens.AccessToken;
-                Properties.Settings.Default.AccessTokenSecret = owner.tokens.AccessTokenSecret;
-                Properties.Settings.Default.ScreenName = owner.tokens.ScreenName;
-                Properties.Settings.Default.Save();
+
+                //Properties.Settings.Default.AccessToken = owner.tokens.AccessToken;
+                //Properties.Settings.Default.AccessTokenSecret = owner.tokens.AccessTokenSecret;
+                //Properties.Settings.Default.ScreenName = owner.tokens.ScreenName;
+                //Properties.Settings.Default.Save();
+                saveOAuthSession("AccessToken",owner.tokens.AccessToken);
+                saveOAuthSession("AccessTokenSecret",owner.tokens.AccessTokenSecret);
+                saveOAuthSession("ScreenName",owner.tokens.ScreenName);
                 // 表示調整
                 owner.updatescreennameLabel(owner.tokens.ScreenName);
 
-                MessageBox.Show("verified: " + owner.tokens.ScreenName +"\r\n" + "twitter画面をリロードしてね" );
+                MessageBox.Show("verified: " + owner.tokens.ScreenName + "\r\n" + "twitter画面をリロードしてね");
 
             }
             catch (Exception ex)
@@ -89,6 +97,38 @@ namespace DesktopMascot.SubScreens.twitter
         private void pinURITextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void saveOAuthSession(string key , string value)
+        {
+            string CurrentDir = System.IO.Directory.GetCurrentDirectory();
+            String csvfilepath = CurrentDir + @"\twitterAccountdata.csv";
+            if (System.IO.File.Exists(csvfilepath))
+            {
+
+                //CSVファイル書き込み
+                System.IO.StreamWriter csvwrite = new System.IO.StreamWriter(
+                    csvfilepath, true,
+                    System.Text.Encoding.GetEncoding("shift_jis"));
+
+                //起動コマンドが既に登録されているかどうか判定
+                Hashtable ht = new Hashtable();
+                if (ht.ContainsKey(key))
+                {
+                    //Hitする時
+                    //起動コマンドは重複してはいけないので(仕様)、エラー表示
+                     csvwrite.Close();
+                }
+                else
+                {
+                    //Hitしない時
+                    //CSVに追記
+                    csvwrite.WriteLine("{0},{1}", key, value);
+
+                }
+
+                csvwrite.Close();
+            }
         }
     }
 }

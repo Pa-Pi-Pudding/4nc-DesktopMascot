@@ -118,6 +118,7 @@
             this.MinimumSize = new System.Drawing.Size(294, 231);
             this.Name = "AddWindow";
             this.Text = "AddWindow";
+            this.Load += new System.EventHandler(this.AddWindow_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
